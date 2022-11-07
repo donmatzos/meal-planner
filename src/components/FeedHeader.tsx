@@ -2,9 +2,8 @@ import logo from "../logo.svg";
 
 export const FeedHeader = () => {
     return (
-        <header>
-            <header className="App-header">
-                <div className="absolute bg-white w-full h-16 top-0">
+            <header className="App-header h-16">
+                <div className="absolute bg-white w-full top-0">
                     <div className="flex h-full items-center">
                         <img
                             className="w-12"
@@ -15,6 +14,5 @@ export const FeedHeader = () => {
                     </div>
                 </div>
             </header>
-        </header>
     );
 };
