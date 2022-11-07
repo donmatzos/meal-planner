@@ -1,19 +1,27 @@
+import { ReactNode } from "react"
 
-export const RecipeModal = () => {
+type RecipeModalProps = {
+    description: string
+    children: ReactNode
+}
+
+export const RecipeModal = ({ children, description }: RecipeModalProps) => {
     return (
-        <>
-            <div>
-                <h1>Recipe</h1>
-                    <p>Description</p>
+        <div className="flex w-full">
+            <div className="flex-col rounded-md w-full bg-white m-2">
+                <h2>{children}</h2>
+                <p className="p-2">{description}</p>
+                <p>Description</p>
                 <h2>Ingredients:</h2>
-                    <ul>
-                        <li>...</li>
-                    </ul>
+                <ul>
+                    <li>...</li>
+                </ul>
                 <h2>Steps:</h2>
-                    <ul>
-                        <li>...</li>
-                    </ul>
+                <ul>
+                    <li>...</li>
+                </ul>
             </div>
-        </>
+        </div>
+
     );
 };
