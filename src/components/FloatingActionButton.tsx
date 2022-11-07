@@ -1,11 +1,15 @@
-export const FloatingActionButton = () => {
-    return(
-        <button /*onClick="buttonHandler()"*/
-                title="Contact Sale"
-                className="fixed z-90 bottom-10 right-8 bg-white w-20 h-20
+type FloatingActionButtonProps = {
+    icon: number
+}
+
+export const FloatingActionButton = ({icon}: FloatingActionButtonProps) => {
+        return (
+            <button /*onClick="buttonHandler()"*/
+                className="fixed z-90 bottom-10 right-8 bg-slate-100 w-20 h-20
                 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl
-                hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300">
-            &#10133;
-        </button>
-    )
+                hover:bg-slate-300"
+            >
+                { icon === 0 ? <span>&#10133;</span> : <span>&#128190;</span>}
+            </button>
+        )
 }
