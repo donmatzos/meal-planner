@@ -6,7 +6,7 @@ export const FeedHeader = () => {
                 <div className="absolute bg-white w-full top-0">
                     <div className="flex h-full items-center">
                         <img
-                            className="w-12"
+                            className="w-12 a"
                             src={logo}
                             alt="Meal Planner Logo"
                         ></img>
