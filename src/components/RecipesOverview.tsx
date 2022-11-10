@@ -1,7 +1,7 @@
 import data from "../db/recipes.json"
 import { GenericCard } from "./GenericCard";
 
-export const ReceipesOverview = () => {
+export const RecipesOverview = () => {
     return (
         <div>
         <div>

@@ -1,14 +1,17 @@
 import React from "react";
 import "./App.css";
-import { NotificationBox } from "./components/NotificationBox";
 import { FeedHeader } from "./components/FeedHeader";
-import { ReceipesOverview } from "./components/ReceipesOverview";
+import { RecipesOverview } from "./components/RecipesOverview";
+import {Collapsible} from "./components/Collapsible";
 
 function App() {
     return (
         <div className="App">
             <FeedHeader></FeedHeader>
-            <ReceipesOverview></ReceipesOverview>
+            <Collapsible
+                open={false}
+                children={<RecipesOverview></RecipesOverview>}
+                title={"Recipe List"}/>
         </div>
     );
 }
