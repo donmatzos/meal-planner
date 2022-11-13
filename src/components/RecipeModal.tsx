@@ -15,7 +15,7 @@ type RecipeModalProps = {
 
 export const RecipeModal = ({title, description, isOpen, ingredients, steps, onClose, children}: RecipeModalProps) => isOpen ? (
 
-    <div className="flex justify-center bg-white m-2">
+    <div className="bg-white fixed w-full h-full top-0 left-0 flex items-center justify-center">
         <div className="flex-col cursor-pointer justify-center shadow-md rounded-t-md">
 
             <div className="text-right">
@@ -25,7 +25,7 @@ export const RecipeModal = ({title, description, isOpen, ingredients, steps, onC
             </div>
 
             <div>
-                <h1 className="text-4xl">{title}</h1>
+                <h1 className="text-4xl font-bold">{title}</h1>
                 <br/>
                 <h2 className="text-2xl">Description:</h2>
                 <p className="p-2">{description}</p>
