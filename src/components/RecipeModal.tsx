@@ -15,8 +15,8 @@ type RecipeModalProps = {
 
 export const RecipeModal = ({title, description, isOpen, ingredients, steps, onClose, children}: RecipeModalProps) => isOpen ? (
 
-    <div className="flex w-full justify-center">
-        <div className="flex-rows cursor-pointer justify-center w-full shadow-md rounded-t-md>">
+    <div className="flex justify-center bg-white m-2">
+        <div className="flex-col cursor-pointer justify-center shadow-md rounded-t-md">
 
             <div className="text-right">
                 <button onClick={onClose} className="">
