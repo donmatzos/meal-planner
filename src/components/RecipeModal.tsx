@@ -18,6 +18,12 @@ export const RecipeModal = ({title, description, isOpen, ingredients, steps, onC
     <div className="flex w-full justify-center">
         <div className="flex-rows cursor-pointer justify-center w-full shadow-md rounded-t-md>">
 
+            <div className="text-right">
+                <button onClick={onClose} className="">
+                    <img src={"../icons/close.svg"} alt="close recipe" />
+                </button>
+            </div>
+
             <div>
                 <h1 className="text-4xl">{title}</h1>
                 <br/>
@@ -30,9 +36,9 @@ export const RecipeModal = ({title, description, isOpen, ingredients, steps, onC
                 <div className="overflow-auto md:overflow-scroll">
                     <h2 className="text-2xl">Ingredients:</h2>
                     <br/>
-                    <ul className="space-y-1 list-disc list-inside text-gray-500 dark:text-gray-400">
+                    <ol className="space-y-1 list-inside text-gray-500 dark:text-gray-400">
                         {ingredients ? ingredients.map((ingred) => <li>{ingred}</li>) : "-" }
-                    </ul>
+                    </ol>
                 </div>
                 <div className="overflow-auto md:overflow-scroll">
                     <h2 className="text-2xl">Steps:</h2>
