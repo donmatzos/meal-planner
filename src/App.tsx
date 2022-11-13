@@ -9,7 +9,7 @@ function App() {
         <div className="App">
             <FeedHeader></FeedHeader>
             <Collapsible
-                open={false}
+                open={true}
                 children={<RecipesOverview></RecipesOverview>}
                 title={"Recipe List"}/>
         </div>
