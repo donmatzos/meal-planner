@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {FloatingActionButton} from "./FloatingActionButton";
+import {CreateRecipeModal} from "./CreateRecipeModal";
 
 type CollapsibleProps = {
     open?: boolean
@@ -23,11 +23,11 @@ export const Collapsible = ({ open, children, title }: CollapsibleProps) => {
                             border border-gray-200 shadow-md hover:bg-slate-100 dark:hover:bg-slate-100
                             text-2xl font-bold text-gray-900"
                             onClick={handleFilterOpening}>
-                        &nbsp; {title} {!isOpen ? <span>&#8643;</span> : <span>&#215;</span>}
+                        &nbsp; {title} {!isOpen ? <span>&#8661;</span> : <span>&#215;</span>}
                     </button>
                     <div className="border-bottom">
                         <div>{isOpen && <div className="p-3">{children}</div>}</div>
-                        <div>{isOpen && <FloatingActionButton icon={0} onClick={() => alert("clicked")}/>}</div>
+                        <div>{isOpen && <CreateRecipeModal/>}</div>
                     </div>
                 </div>
 

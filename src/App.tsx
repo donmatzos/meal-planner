@@ -2,14 +2,14 @@ import React from "react";
 import "./App.css";
 import { FeedHeader } from "./components/FeedHeader";
 import { RecipesOverview } from "./components/RecipesOverview";
-import {Collapsible} from "./components/Collapsible";
-import {AddRecipeModal} from "./components/AddRecipeModal";
+import { Collapsible } from "./components/Collapsible";
+import { CreateRecipeBody } from "./components/CreateRecipeBody";
 
 function App() {
     return (
         <div className="App">
             <FeedHeader></FeedHeader>
-            <AddRecipeModal/>
+            <CreateRecipeBody></CreateRecipeBody>
             <Collapsible
                 open={true}
                 children={<RecipesOverview></RecipesOverview>}
