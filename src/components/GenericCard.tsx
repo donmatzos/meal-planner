@@ -20,9 +20,9 @@ export const GenericCard = ({description, index,  children}: CardProps) => {
 
                 <p className="p-2 text-left text-ellipsis line-clamp-3 ..." >{description}</p>
 
-                <div>
+                <div className="z-20">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={toggleModal}>Open Recipe</button>
-                    <div className="flex justify-center bg-white fixed w-0.8">
+                    <div>
                         <RecipeModal
                             title={data[index].Name}
                             description={data[index].Description || "-"}

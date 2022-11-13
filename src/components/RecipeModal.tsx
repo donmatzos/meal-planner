@@ -15,8 +15,8 @@ type RecipeModalProps = {
 
 export const RecipeModal = ({title, description, isOpen, ingredients, steps, onClose, children}: RecipeModalProps) => isOpen ? (
 
-    <div className="bg-white fixed w-full h-full top-0 left-0 flex items-center justify-center">
-        <div className="flex-col cursor-pointer justify-center shadow-md rounded-t-md">
+    <div className="flex fixed w-full min-h-screen top-0 left-0">
+        <div className="flex flex-col bg-white cursor-pointer justify-center shadow-md min-h-screen">
 
             <div className="text-right">
                 <button onClick={onClose} className="">
@@ -32,20 +32,20 @@ export const RecipeModal = ({title, description, isOpen, ingredients, steps, onC
                 <hr />
             </div>
 
-            <div className="flex flex-row text-left ...">
-                <div className="overflow-auto md:overflow-scroll">
+            <div className="flex flex-row text-left overflow-auto ...">
+                <div className="min-w-max p-10">
                     <h2 className="text-2xl">Ingredients:</h2>
                     <br/>
-                    <ol className="space-y-1 list-inside text-gray-500 dark:text-gray-400">
+                    <ol className="space-y-0 list-disc list-inside text-gray-500 dark:text-gray">
                         {ingredients ? ingredients.map((ingred) => <li>{ingred}</li>) : "-" }
                     </ol>
                 </div>
-                <div className="overflow-auto md:overflow-scroll">
+                <div className="p-10 overflow-auto">
                     <h2 className="text-2xl">Steps:</h2>
                     <br/>
-                    <ul className="space-y-1 list-disc list-inside text-gray-500 dark:text-gray-400">
-                        {steps ? steps.map((step) => <li>{step}</li>) : "-" }
-                    </ul>
+                    <ol className="space-y-0 list-decimal list-inside text-gray-500 dark:text-gray ">
+                            {steps ? steps.map((step) => <li><p>{step}</p></li>) : "-" }
+                    </ol>
                 </div>
             </div>
 

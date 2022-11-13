@@ -11,7 +11,7 @@ export const RecipesOverview = () => {
 
             <div className="grid grid-cols-6 grid-rows-3">
                 {data.map((dat, index) =>
-                    <GenericCard index={index}
+                    <GenericCard key={index} index={index}
                                  description={dat.Description || "-"}>
                         {dat.Name} {index}
                     </GenericCard>
