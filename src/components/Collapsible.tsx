@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {CreateRecipeModal} from "./CreateRecipeModal";
+import {CreateRecipeBody} from "./CreateRecipeBody";
 
 type CollapsibleProps = {
     open?: boolean
@@ -27,7 +28,7 @@ export const Collapsible = ({ open, children, title }: CollapsibleProps) => {
                     </button>
                     <div className="border-bottom">
                         <div>{isOpen && <div className="p-3">{children}</div>}</div>
-                        <div>{isOpen && <CreateRecipeModal/>}</div>
+                        <div>{isOpen && <CreateRecipeModal children={<CreateRecipeBody/>}/>}</div>
                     </div>
                 </div>
 

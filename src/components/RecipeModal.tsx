@@ -1,7 +1,5 @@
 import React from "react";
 import {ReactNode} from "react"
-import data from "../db/recipes.json";
-import {GenericCard} from "./GenericCard";
 
 type RecipeModalProps = {
     title: string;

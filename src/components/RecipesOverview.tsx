@@ -1,7 +1,6 @@
 import React from "react";
 import data from "../db/recipes.json"
 import { GenericCard } from "./GenericCard";
-import set = Reflect.set;
 
 
 export const RecipesOverview = () => {
