@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import { FloatingActionButton } from "./FloatingActionButton";
 
 type CreateRecipeModalProps = {
+    title: string
+    isAddIcon: boolean
     children?: React.ReactNode
 }
 
-export const CreateRecipeModal = ({ children }: CreateRecipeModalProps) => {
+export const FloatingActionButtonModal = ({ title, isAddIcon, children }: CreateRecipeModalProps) => {
     const [showModal, setShowModal] = useState(false)
 
     return (
         <>
-            <FloatingActionButton icon={0} onClick={() => setShowModal(true)}/>
+            <FloatingActionButton isAddIcon={ isAddIcon } onClick={() => setShowModal(true)}/>
             {showModal ? (
                 <>
                     <div
@@ -25,7 +27,7 @@ export const CreateRecipeModal = ({ children }: CreateRecipeModalProps) => {
                                 <div className="flex items-start justify-between p-5
                                 border-b border-solid border-slate-200 rounded-t">
                                     <h3 className="text-3xl font-semibold">
-                                        Add Recipe
+                                        { title }
                                     </h3>
                                     <button
                                         className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right

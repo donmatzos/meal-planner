@@ -9,8 +9,14 @@ function App() {
         <div className="App">
             <FeedHeader></FeedHeader>
             <Collapsible
+                open={false}
+                children={<></>}
+                isAddIcon={false}
+                title={"My Weekly Meal Plan"} />
+            <Collapsible
                 open={true}
                 children={<RecipesOverview></RecipesOverview>}
+                isAddIcon={true}
                 title={"Recipe List"}/>
         </div>
     );
