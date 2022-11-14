@@ -1,15 +1,17 @@
 import React, {useState} from "react";
-import {FloatingActionButtonModal} from "./FloatingActionButtonModal";
+import {GenericButtonModal} from "./GenericButtonModal";
 import {CreateRecipeBody} from "./CreateRecipeBody";
 
 type CollapsibleProps = {
     open?: boolean
     children?: React.ReactNode
-    isAddIcon: boolean
+    isFab: boolean
+    isAddIcon?: boolean
     title: string
+    modalTitle?: string
 }
 
-export const Collapsible = ({ open, children, isAddIcon, title }: CollapsibleProps) => {
+export const Collapsible = ({ open, children, isFab, isAddIcon, title, modalTitle }: CollapsibleProps) => {
     const [isOpen, setIsOpen] = useState(open);
 
     const handleFilterOpening = () => {
@@ -26,7 +28,7 @@ export const Collapsible = ({ open, children, isAddIcon, title }: CollapsiblePro
                             text-2xl font-semibold text-gray-900"
                             onClick={handleFilterOpening}>
                         &nbsp;
-                        {title}
+                        { title }
                         {!isOpen ? <span>&#8661;</span> : <span>&#215;</span>}
                     </button>
                     <div className="border-bottom">
@@ -36,8 +38,9 @@ export const Collapsible = ({ open, children, isAddIcon, title }: CollapsiblePro
                                 </div>
                         }</div>
                         <div>{isOpen
-                            && <FloatingActionButtonModal
-                                title="Add Recipe"
+                            && <GenericButtonModal
+                                title={ modalTitle || "-" }
+                                isFab={ isFab }
                                 isAddIcon={ isAddIcon }
                                 children={<CreateRecipeBody/>}/>
                         }</div>

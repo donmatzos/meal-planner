@@ -3,16 +3,24 @@ import { FloatingActionButton } from "./FloatingActionButton";
 
 type CreateRecipeModalProps = {
     title: string
-    isAddIcon: boolean
+    isFab: boolean
+    isAddIcon?: boolean
     children?: React.ReactNode
 }
 
-export const FloatingActionButtonModal = ({ title, isAddIcon, children }: CreateRecipeModalProps) => {
+export const GenericButtonModal = ({ title, isFab, isAddIcon, children }: CreateRecipeModalProps) => {
     const [showModal, setShowModal] = useState(false)
 
     return (
         <>
-            <FloatingActionButton isAddIcon={ isAddIcon } onClick={() => setShowModal(true)}/>
+            {isFab ? (
+                <FloatingActionButton isAddIcon={ isAddIcon || false } onClick={() => setShowModal(true)}/>
+            ) : (
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                        onClick={() => setShowModal(true)}>
+                    Open Recipe
+                </button>
+            )}
             {showModal ? (
                 <>
                     <div
@@ -38,7 +46,9 @@ export const FloatingActionButtonModal = ({ title, isAddIcon, children }: Create
                                     </button>
                                 </div>
                                 {/*body*/}
-                                { children }
+                                <div className="flex-auto">
+                                    { children }
+                                </div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                                     <button

@@ -11,13 +11,19 @@ function App() {
             <Collapsible
                 open={false}
                 children={<></>}
+                isFab={true}
                 isAddIcon={false}
-                title={"My Weekly Meal Plan"} />
+                title={"My Weekly Meal Plan"}
+                modalTitle={"Export my Recipes"}
+            />
             <Collapsible
                 open={true}
                 children={<RecipesOverview></RecipesOverview>}
+                isFab={true}
                 isAddIcon={true}
-                title={"Recipe List"}/>
+                title={"Recipe List"}
+                modalTitle={"Add Recipe"}
+            />
         </div>
     );
 }
