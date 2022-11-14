@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react"
 import {RecipeModal} from "./RecipeModal";
 import data from "../db/recipes.json";
+import {toggleOpen} from "../recipeSlice"
+import {useAppDispatch} from "../store";
 
 type CardProps = {
     description: string
@@ -9,8 +11,8 @@ type CardProps = {
 }
 
 export const GenericCard = ({description, index,  children}: CardProps) => {
+    const dispatch = useAppDispatch();
     const [isModalOpen, setModalState] = React.useState(false);
-    const toggleModal = () => setModalState(!isModalOpen);
 
     return(
         <div className="flex w-full max-h-104 drop-shadow-lg rounded-t-md">
@@ -21,18 +23,8 @@ export const GenericCard = ({description, index,  children}: CardProps) => {
                 <p className="p-2 text-left text-ellipsis line-clamp-2 h-16 ..." >{description}</p>
 
                 <div>
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-4 bottom-0" onClick={toggleModal}>Open Recipe</button>
-                    <div>
-                        <RecipeModal
-                            title={data.recipe[index].name}
-                            description={data.recipe[index].description || "-"}
-                            /*steps={data.recipe[index].Method}
-                            ingredients={data.recipe[index].Ingredients}*/
-                            isOpen={isModalOpen}
-                            onClose={toggleModal}
-                        />
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-4 bottom-0" onClick={() => dispatch(toggleOpen(index ?? 0))}>Open Recipe</button>
 
-                    </div>
                 </div>
 
             </div>
