@@ -9,10 +9,10 @@ export const RecipesOverview = () => {
         <div className="justify-center">
 
             <div className="grid grid-cols-6 grid-rows-3">
-                {data.map((dat, index) =>
+                {data.recipe.map((dat, index) =>
                     <GenericCard key={index} index={index}
-                                 description={dat.Description || "-"}>
-                        {dat.Name} {index}
+                                 description={dat.description || "-"}>
+                        {dat.name} {index}
                     </GenericCard>
                 )}
             </div>
