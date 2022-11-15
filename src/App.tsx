@@ -20,9 +20,8 @@ function App() {
             />
             <MainContainer
              children={<></>}
-             isFab={true}
              title={"Recipe List"}
-             modalTitle={"Export my Recipes"}></MainContainer>
+             modalTitle={"Create new Recipe"}></MainContainer>
         </div>
     );
 }

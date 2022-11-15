@@ -5,7 +5,7 @@ export const CreateRecipeBody = () => {
 
     return (
         <>
-            <div className="flex flex-col bg-white w-auto">
+            <div className="flex flex-col bg-zinc-900 w-auto text-white">
                 <div className="flex flex-row justify-between p-2">
                     <div className="w-1/3">
                         <TextInput label="Recipe Name"/>
