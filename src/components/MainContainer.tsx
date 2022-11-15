@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { GenericButtonModal } from "./GenericButtonModal";
 import { CreateRecipeBody } from "./CreateRecipeBody";
 import { RecipesOverview } from "./RecipesOverview";
+import { WeeklyPlanner } from "./WeeklyPlanner";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 
@@ -24,7 +25,7 @@ export const MainContainer = ({
         if (recipe.showRecipes) {
             return <RecipesOverview></RecipesOverview>;
         } else {
-            return <div>Sus</div>
+            return <WeeklyPlanner></WeeklyPlanner>
         }
     }
 
