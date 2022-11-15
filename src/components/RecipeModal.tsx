@@ -31,7 +31,7 @@ export const RecipeModal = ({title, description, isOpen, ingredients, steps, onC
                     <div className="flex-col text-left">
                         <div className="">
                             <h1 className="text-4xl font-bold font-oswald text-2xl p-6">{data.recipe[curRecipe.index].name}</h1>
-                            <h2 className="pl-8 pb-4">- {data.recipe[curRecipe.index].description}</h2>
+                            <h2 className="text-xl pl-8 pb-4">- {data.recipe[curRecipe.index].description}</h2>
                             <hr/>
                         </div>
 
