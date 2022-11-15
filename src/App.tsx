@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { FeedHeader } from "./components/FeedHeader";
 import { RecipesOverview } from "./components/RecipesOverview";
-import { Collapsible } from "./components/Collapsible";
+import { MainContainer } from "./components/MainContainer";
 import { RecipeModal } from "./components/RecipeModal";
 import { toggleOpen } from "./recipeSlice";
 
@@ -18,22 +18,11 @@ function App() {
                 isOpen={isModalOpen}*/
                 onClose={() => toggleOpen(0)}
             />
-            <Collapsible
-                open={false}
-                children={<></>}
-                isFab={true}
-                isAddIcon={false}
-                title={"My Weekly Meal Plan"}
-                modalTitle={"Export my Recipes"}
-            />
-            <Collapsible
-                open={true}
-                children={<RecipesOverview></RecipesOverview>}
-                isFab={true}
-                isAddIcon={true}
-                title={"Recipe List"}
-                modalTitle={"Add Recipe"}
-            />
+            <MainContainer
+             children={<></>}
+             isFab={true}
+             title={"Recipe List"}
+             modalTitle={"Export my Recipes"}></MainContainer>
         </div>
     );
 }
