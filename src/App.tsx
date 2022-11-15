@@ -3,8 +3,8 @@ import "./App.css";
 import { FeedHeader } from "./components/FeedHeader";
 import { RecipesOverview } from "./components/RecipesOverview";
 import { Collapsible } from "./components/Collapsible";
-import {RecipeModal} from "./components/RecipeModal";
-import {toggleOpen} from "./recipeSlice";
+import { RecipeModal } from "./components/RecipeModal";
+import { toggleOpen } from "./recipeSlice";
 
 function App() {
     return (

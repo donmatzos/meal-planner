@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {GenericButtonModal} from "./GenericButtonModal";
-import {TextInput} from "./TextInput";
+import {CreateRecipeBody} from "./CreateRecipeBody";
 
 type CollapsibleProps = {
     open?: boolean
@@ -42,7 +42,7 @@ export const Collapsible = ({ open, children, isFab, isAddIcon, title, modalTitl
                                 title={ modalTitle || "-" }
                                 isFab={ isFab }
                                 isAddIcon={ isAddIcon }
-                                children={<TextInput label="Recipe Name" placeholder="add name here..."/>}/>
+                                children={<CreateRecipeBody/>}/>
                         }</div>
                     </div>
                 </div>

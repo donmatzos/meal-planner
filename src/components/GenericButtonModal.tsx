@@ -38,11 +38,11 @@ export const GenericButtonModal = ({ title, isFab, isAddIcon, children }: Create
                                         { title }
                                     </h3>
                                     <button
-                                        className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right
-                                        text-3xl leading-none font-semibold outline-none focus:outline-none"
+                                        className="p-1 ml-auto text-black float-right
+                                        text-3xl leading-none font-semibold"
                                         onClick={() => setShowModal(false)}
                                     >
-                                        <span>&#215;</span>
+                                        <img src={"../icons/close.svg"} alt="close"/>
                                     </button>
                                 </div>
                                 {/*body*/}
