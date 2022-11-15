@@ -6,16 +6,17 @@ import {useAppDispatch} from "../store";
 
 type CardProps = {
     description: string
-    index: number
+    id: string
     children: ReactNode
 }
 
-export const GenericCard = ({description, index,  children}: CardProps) => {
+export const GenericCard = ({description, id,  children}: CardProps) => {
     const dispatch = useAppDispatch();
     const [isModalOpen, setModalState] = React.useState(false);
+    const recipe = data.recipe.find((r) => r.id === id);
 
     const layout = () => {
-        if (index == -1) {
+        if (!recipe) {
             return(
             <div className="flex w-80 max-h-104 drop-shadow-lg rounded-t-md text-white">
                 <div className="flex-col justify-between overflow-hidden rounded-md w-full bg-zinc-900 m-2">
@@ -23,7 +24,7 @@ export const GenericCard = ({description, index,  children}: CardProps) => {
                     <h2 className="font-oswald text-2xl font-medium truncate">{children}</h2>
                     <p className="p-2 text-center text-ellipsis line-clamp-2 h-16 ..." >{description}</p>
                     <div>
-                        <button className="bg-violet-400 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0" onClick={() => dispatch(toggleOpen(index ?? 0))}>Add Recipe</button>
+                        <button className="bg-violet-600 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0" onClick={() => dispatch(toggleOpen(id ?? 0))}>Add Recipe</button>
                     </div>
                 </div>
             </div>
@@ -32,11 +33,11 @@ export const GenericCard = ({description, index,  children}: CardProps) => {
             return(
             <div className="flex w-full max-h-104 drop-shadow-lg rounded-t-md text-white">
                 <div className="flex-col justify-between overflow-hidden rounded-md w-full bg-zinc-900 m-2">
-                    <img className="rounded-t-md object-cover w-full h-60" alt={data.recipe[index].name} src={data.recipe[index].image}/>
-                    <h2 className="font-oswald text-2xl font-medium truncate">{data.recipe[index].name}</h2>
+                    <img className="rounded-t-md object-cover w-full h-60" alt={recipe.name} src={recipe.image}/>
+                    <h2 className="font-oswald text-2xl font-medium truncate">{recipe.name}</h2>
                     <p className="p-2 text-left text-ellipsis line-clamp-2 h-16 ..." >{description}</p>
                     <div>
-                        <button className="bg-violet-400 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0" onClick={() => dispatch(toggleOpen(index ?? 0))}>Open Recipe</button>
+                        <button className="bg-violet-600 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0" onClick={() => dispatch(toggleOpen(id ?? 0))}>Open Recipe</button>
                     </div>
                 </div>
             </div>

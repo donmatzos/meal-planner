@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { changeCategory } from "../categorySlice";
+import { search } from "../recipeSlice";
 import logo from "../logo.svg";
 import { RootState, useAppDispatch } from "../store";
 
@@ -13,6 +14,7 @@ export const FeedHeader = () => {
                         <h1 className="text-left font-oswald">🍴Meal Planner</h1>
                         <button onClick={() => dispatch(changeCategory(false))} className="hover:opacity-75 ml-4 pl-5 pr-5 text-center text-3xl h-full shadow-[inset_1px_0px_4px_rgba(0,0,0,0.6)]">📅 Meal Planner</button>
                         <button onClick={() => dispatch(changeCategory(true))} className="hover:opacity-75 pl-5 pr-5 text-center text-3xl h-full shadow-[inset_-1px_0px_4px_rgba(0,0,0,0.6)]">🍔 Recipe List</button>
+                        <input className="text-white h-3/4 rounded-full bg-slate-800 pl-4" placeholder="Search..."type="text" onChange={(e) => dispatch(search(e.target.value))} />
                     </div>
                 </div>
             </header>

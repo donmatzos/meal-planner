@@ -6,32 +6,29 @@ import {RootState, useAppDispatch} from "../store";
 import {toggleOpen} from "../recipeSlice";
 
 type RecipeModalProps = {
-    title: string;
-    description: string
-    isOpen?: boolean
-    ingredients?: string []
-    steps?: string []
+    id: string
     onClose?: () => void
     children?: ReactNode
 }
 
-export const RecipeModal = ({title, description, isOpen, ingredients, steps, onClose, children}: RecipeModalProps) => {
+export const RecipeModal = ({id, onClose, children}: RecipeModalProps) => {
     const curRecipe = useSelector((state: RootState) => state.openRecipe);
     const dispatch = useAppDispatch();
-    if (curRecipe.open) {
+    const recipe = () => data.recipe.find((r) => r.id === curRecipe.id);
+    if (curRecipe.open && curRecipe.id) {
         return (
-            <div className={`flex fixed z-20 w-full text-white min-h-screen top-0 left-0`}>
+            <div className={`flex fixed z-20 w-full  text-white min-h-screen top-0 left-0`}>
 
-                <div className="flex flex-row w-full bg-zinc-900 shadow-md min-h-screen">
+                <div className="flex flex-row w-full  bg-zinc-900 shadow-md min-h-screen">
 
 
-                    <img className="object-cover w-1/3 h-full" alt={data.recipe[curRecipe.index].name}
-                         src={data.recipe[curRecipe.index].image}/>
+                    <img className="object-cover w-1/3 h-full" alt={recipe()!.name}
+                         src={recipe()!.image}/>
 
-                    <div className="flex-col text-left">
+                    <div className="flex-col text-left my-auto">
                         <div className="">
-                            <h1 className="text-4xl font-bold font-oswald text-2xl p-6">{data.recipe[curRecipe.index].name}</h1>
-                            <h2 className="text-xl pl-8 pb-4">- {data.recipe[curRecipe.index].description}</h2>
+                            <h1 className="text-4xl font-bold font-oswald text-2xl p-6">{recipe()!.name}</h1>
+                            <h2 className="text-xl pl-8 pb-4">- {recipe()!.description}</h2>
                             <hr/>
                         </div>
 
@@ -39,14 +36,14 @@ export const RecipeModal = ({title, description, isOpen, ingredients, steps, onC
                             <div className="min-w-max p-10 ">
                                 <h2 className="text-xl text-violet-400 font-bold pb-3">Ingredients:</h2>
                                 <ol className="space-y-0 list-disc list-inside ">
-                                    {data.recipe[curRecipe.index].ingredient ? data.recipe[curRecipe.index].ingredient.map((ingred) =>
+                                    {recipe()!.ingredient ? recipe()!.ingredient.map((ingred) =>
                                         <li>{ingred.amount} {ingred.unit} {ingred.name}</li>) : "-"}
                                 </ol>
                             </div>
                             <div className="p-10 overflow-auto">
                                 <h2 className="text-xl text-violet-400 font-bold pb-2">Steps:</h2>
                                 <ol className="space-y-0 list-disc">
-                                    {data.recipe[curRecipe.index].step ? data.recipe[curRecipe.index].step.map((step) =>
+                                    {recipe()!.step ? recipe()!.step.map((step) =>
                                         <li>{step.description}</li>) : "-"}
                                 </ol>
                             </div>
@@ -61,6 +58,7 @@ export const RecipeModal = ({title, description, isOpen, ingredients, steps, onC
                 </div>
 
             </div>
+
         )
     }
     return null

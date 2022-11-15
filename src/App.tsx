@@ -11,8 +11,7 @@ function App() {
         <div className="App">
             <FeedHeader></FeedHeader>
             <RecipeModal
-                title={""}
-                description={""}
+                id={""}
                 /*steps={data.recipe[index].Method}
                 ingredients={data.recipe[index].Ingredients}
                 isOpen={isModalOpen}*/

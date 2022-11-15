@@ -1,25 +1,27 @@
-import { createSlice }from "@reduxjs/toolkit"
+import {createSlice} from "@reduxjs/toolkit"
 
 const initialState = {
     open: false,
-    index: -1,
+    id: "",
+    searchTerm: ""
 };
 
 export const recipeSlice = createSlice({
     name: 'recipe',
     initialState,
-    reducers:{
+    reducers: {
         toggleOpen: (state, action?) => {
             state.open = !state.open;
-            state.index = action.payload;
-            console.log(state.open, state.index);
+            state.id = action.payload;
+            console.log(state.open, state.id);
         },
-        changeIndex: (state, action) =>{
-            state.index = action.payload
-        },
+        search: (state, action) => {
+            state.searchTerm = action.payload;
+            console.log(action.payload);
+        }
     },
 });
 
-export const { toggleOpen, changeIndex } = recipeSlice.actions;
+export const {toggleOpen, search} = recipeSlice.actions;
 
- export default recipeSlice.reducer;
+export default recipeSlice.reducer;
