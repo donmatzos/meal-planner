@@ -8,14 +8,12 @@ import { RootState } from "../store";
 
 type MainContainerProps = {
     children?: React.ReactNode;
-    isFab: boolean;
     title: string;
     modalTitle?: string;
 };
 
 export const MainContainer = ({
     children,
-    isFab,
     title,
     modalTitle,
 }: MainContainerProps) => {
@@ -37,7 +35,6 @@ export const MainContainer = ({
                     {recipe.showRecipes && (
                         <GenericButtonModal
                             title={modalTitle || "-"}
-                            isFab={isFab}
                             isAddIcon={recipe.showRecipes}
                             children={<CreateRecipeBody />}
                         />

@@ -5,13 +5,12 @@ import {CreateRecipeBody} from "./CreateRecipeBody";
 type CollapsibleProps = {
     open?: boolean
     children?: React.ReactNode
-    isFab: boolean
     isAddIcon?: boolean
     title: string
     modalTitle?: string
 }
 
-export const Collapsible = ({ open, children, isFab, isAddIcon, title, modalTitle }: CollapsibleProps) => {
+export const Collapsible = ({ open, children, isAddIcon, title, modalTitle }: CollapsibleProps) => {
     const [isOpen, setIsOpen] = useState(open);
 
     const handleFilterOpening = () => {
@@ -40,7 +39,6 @@ export const Collapsible = ({ open, children, isFab, isAddIcon, title, modalTitl
                         <div>{isOpen
                             && <GenericButtonModal
                                 title={ modalTitle || "-" }
-                                isFab={ isFab }
                                 isAddIcon={ isAddIcon }
                                 children={<CreateRecipeBody/>}/>
                         }</div>

@@ -3,34 +3,26 @@ import { FloatingActionButton } from "./FloatingActionButton";
 
 type CreateRecipeModalProps = {
     title: string
-    isFab: boolean
     isAddIcon?: boolean
     children?: React.ReactNode
 }
 
-export const GenericButtonModal = ({ title, isFab, isAddIcon, children }: CreateRecipeModalProps) => {
+export const GenericButtonModal = ({ title, isAddIcon, children }: CreateRecipeModalProps) => {
     const [showModal, setShowModal] = useState(false)
 
     return (
         <>
-            {isFab ? (
-                <FloatingActionButton isAddIcon={ isAddIcon || false } onClick={() => setShowModal(true)}/>
-            ) : (
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-                        onClick={() => setShowModal(true)}>
-                    Open Recipe
-                </button>
-            )}
+            <FloatingActionButton isAddIcon={ isAddIcon || false } onClick={() => setShowModal(true)}/>
             {showModal ? (
                 <>
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed
                         inset-0 z-50 outline-none focus:outline-none"
                     >
-                        <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                        <div className="relative w-4/5 my-6 mx-auto max-w-screen-2xl">
                             {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col
-                            w-full bg-white outline-none focus:outline-none">
+                            w-full bg-zinc-900 text-white outline-none focus:outline-none">
                                 {/*header*/}
                                 <div className="flex items-start justify-between p-5
                                 border-b border-solid border-slate-200 rounded-t">
@@ -52,17 +44,14 @@ export const GenericButtonModal = ({ title, isFab, isAddIcon, children }: Create
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                                     <button
-                                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2
+                                        className="text-white background-transparent font-bold uppercase px-6 py-2
                                         text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        type="button"
                                         onClick={() => setShowModal(false)}
                                     >
                                         Close
                                     </button>
                                     <button
-                                        className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3
-                                        rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                        type="button"
+                                        className="bg-violet-400 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0"
                                         onClick={() => setShowModal(false)}
                                     >
                                         Save Recipe
