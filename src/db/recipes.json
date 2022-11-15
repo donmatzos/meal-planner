@@ -6,111 +6,90 @@
             "description": "The Greek staple",
             "tag": ["Greek"],
             "image": "https://image.essen-und-trinken.de/11941592/t/Oz/v10/w960/r1/-/moussaka-jpg--59489-.jpg",
-            "ingredient": [],
-            "ingredientGroup": [
+            "ingredient": [
                 {
-                    "name": "Bottom layer: Eggplants",
-                    "ingredient": [
-                        {
-                            "name": "large eggplants",
-                            "unit": "3"
-                        },
-                        {
-                            "name": "Olive oil"
-                        },
-                        {
-                            "name": "Salt"
-                        }
-                    ]
+                    "name": "large eggplants",
+                    "unit": "3"
                 },
                 {
-                    "name": "Middle layer: Mince",
-                    "ingredient": [
-                        {
-                            "amount": "1.5",
-                            "unit": "kg",
-                            "name": "ground beef"
-                        },
-                        {
-                            "amount": "3",
-                            "name": "large onions"
-                        },
-                        {
-                            "amount": "3",
-                            "name": "garlic cloves"
-                        },
-                        {
-                            "amount": "700gr",
-                            "name": "tomato pureé"
-                        },
-                        {
-                            "amount": "3",
-                            "unit": "tbsp",
-                            "name": "sugar"
-                        },
-                        {
-                            "name": "Metaxa or other cognac"
-                        },
-                        {
-                            "amount": "4",
-                            "name": "bay leaves"
-                        },
-                        {
-                            "name": "olive oil"
-                        },
-                        {
-                            "name": "salt"
-                        },
-                        {
-                            "name": "black pepper"
-                        }
-                    ]
+                    "name": "Olive oil"
                 },
                 {
-                    "name": "Top layer: Béchamel",
-                    "ingredient": [
-                        {
-                            "amount": "1.5",
-                            "unit": "lt",
-                            "name": "milk"
-                        },
-                        {
-                            "amount": "150",
-                            "unit": "gr",
-                            "name": "butter"
-                        },
-                        {
-                            "amount": "150",
-                            "unit": "gr",
-                            "name": "flour"
-                        },
-                        {
-                            "amount": "1",
-                            "name": "onion"
-                        },
-                        {
-                            "name": "cloves"
-                        },
-                        {
-                            "name": "ground nutmeg"
-                        },
-                        {
-                            "amount": "1-2",
-                            "name": "eggs"
-                        },
-                        {
-                            "name": "Graviera or other hard yellow cheese",
-                            "preparation": "grated"
-                        },
-                        {
-                            "name": "salt"
-                        },
-                        {
-                            "name": "black pepper"
-                        }
-                    ]
+                    "name": "Salt"
+                },
+                {
+                    "amount": "1.5",
+                    "unit": "kg",
+                    "name": "ground beef"
+                },
+                {
+                    "amount": "3",
+                    "name": "large onions"
+                },
+                {
+                    "amount": "3",
+                    "name": "garlic cloves"
+                },
+                {
+                    "amount": "700gr",
+                    "name": "tomato pureé"
+                },
+                {
+                    "amount": "3",
+                    "unit": "tbsp",
+                    "name": "sugar"
+                },
+                {
+                    "name": "Metaxa or other cognac"
+                },
+                {
+                    "amount": "4",
+                    "name": "bay leaves"
+                },
+                {
+                    "name": "olive oil"
+                },
+                {
+                    "name": "salt"
+                },
+                {
+                    "name": "black pepper"
+                },
+                {
+                    "amount": "1.5",
+                    "unit": "lt",
+                    "name": "milk"
+                },
+                {
+                    "amount": "150",
+                    "unit": "gr",
+                    "name": "butter"
+                },
+                {
+                    "amount": "150",
+                    "unit": "gr",
+                    "name": "flour"
+                },
+                {
+                    "amount": "1",
+                    "name": "onion"
+                },
+                {
+                    "name": "cloves"
+                },
+                {
+                    "name": "ground nutmeg"
+                },
+                {
+                    "amount": "1-2",
+                    "name": "eggs"
+                },
+                {
+                    "name": "Graviera or other hard yellow cheese",
+                    "preparation": "grated"
                 }
             ],
+            "ingredientGroup": [],
             "step": [
                 {
                     "description": "**Bottom layer:** Slice the eggplants, length-wise into 8mm slices.\nPut them on a pan, add salt and drizzle olive oil.\nBake them at 170-180C for 10-15 minutes."
@@ -191,15 +170,7 @@
                     "preparation": "(optional)"
                 }
             ],
-            "ingredientGroup": [
-                {
-                    "ingredient": [
-                        {
-                            "amount": "1"
-                        }
-                    ]
-                }
-            ],
+            "ingredientGroup": [],
             "step": [
                 {
                     "description": "In a large frying pan cook the cauliflower rice and the onion with butter and the concentrated chicken stock until the cauliflower rice starts drying a bit and the onion becomes translucent (if not using frozen cauliflower rice you may need to cook the onion before adding the cauliflower rice). Do not add butter to the pan first, you can just cook it all together."
@@ -352,11 +323,7 @@
                     "name": "sesame seeds for garnish"
                 }
             ],
-            "ingredientGroup": [
-                {
-                    "ingredient": []
-                }
-            ],
+            "ingredientGroup": [],
             "step": [
                 {
                     "description": "Beat all ingredients together really well in a blender."
@@ -527,89 +494,78 @@
                 {
                     "amount": "4",
                     "name": "garlic cloves"
-                }
-            ],
-            "ingredientGroup": [
-                {
-                    "name": "Mint-Mango Sauce",
-                    "ingredient": [
-                        {
-                            "amount": "1",
-                            "name": "medium ripe mango"
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "cup",
-                            "name": "fresh mint"
-                        },
-                        {
-                            "amount": "2",
-                            "name": "green onions"
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "tbsp",
-                            "name": "fresh lime juice"
-                        },
-                        {
-                            "amount": "1",
-                            "name": "serrano chile",
-                            "preparation": "halved and seeded"
-                        },
-                        {
-                            "amount": "0.5",
-                            "name": "ripe avocado"
-                        }
-                    ]
                 },
                 {
-                    "name": "Spice mix",
-                    "ingredient": [
-                        {
-                            "amount": "1",
-                            "unit": "tbsp",
-                            "name": "cumin",
-                            "preparation": "ground"
-                        },
-                        {
-                            "amount": "2",
-                            "unit": "tsp",
-                            "name": "ground coriander"
-                        },
-                        {
-                            "amount": "2",
-                            "unit": "tsp",
-                            "name": "ground cinammon"
-                        },
-                        {
-                            "amount": "0.5",
-                            "unit": "tsp",
-                            "name": "turmeric"
-                        },
-                        {
-                            "amount": "0.25",
-                            "unit": "tsp",
-                            "name": "cayenne pepper"
-                        },
-                        {
-                            "amount": "0.25",
-                            "unit": "tsp",
-                            "name": "ground cardamom"
-                        },
-                        {
-                            "amount": "0.125",
-                            "unit": "tsp",
-                            "name": "cloves",
-                            "preparation": "ground"
-                        },
-                        {
-                            "amount": "0.5",
-                            "unit": "tbsp",
-                            "name": "coarse kosher salt"
-                        }
-                    ]
+                    "amount": "1",
+                    "name": "medium ripe mango"
+                },
+                {
+                    "amount": "1",
+                    "unit": "cup",
+                    "name": "fresh mint"
+                },
+                {
+                    "amount": "2",
+                    "name": "green onions"
+                },
+                {
+                    "amount": "1",
+                    "unit": "tbsp",
+                    "name": "fresh lime juice"
+                },
+                {
+                    "amount": "1",
+                    "name": "serrano chile",
+                    "preparation": "halved and seeded"
+                },
+                {
+                    "amount": "0.5",
+                    "name": "ripe avocado"
+                },
+                {
+                    "amount": "1",
+                    "unit": "tbsp",
+                    "name": "cumin",
+                    "preparation": "ground"
+                },
+                {
+                    "amount": "2",
+                    "unit": "tsp",
+                    "name": "ground coriander"
+                },
+                {
+                    "amount": "2",
+                    "unit": "tsp",
+                    "name": "ground cinammon"
+                },
+                {
+                    "amount": "0.5",
+                    "unit": "tsp",
+                    "name": "turmeric"
+                },
+                {
+                    "amount": "0.25",
+                    "unit": "tsp",
+                    "name": "cayenne pepper"
+                },
+                {
+                    "amount": "0.25",
+                    "unit": "tsp",
+                    "name": "ground cardamom"
+                },
+                {
+                    "amount": "0.125",
+                    "unit": "tsp",
+                    "name": "cloves",
+                    "preparation": "ground"
+                },
+                {
+                    "amount": "0.5",
+                    "unit": "tbsp",
+                    "name": "coarse kosher salt"
                 }
             ],
+            "ingredientGroup": [],
             "step": [
                 {
                     "description": "In a blender or mini food processor, blend all the sauce ingredients, and chill in the fridge."
@@ -648,108 +604,97 @@
                 },
                 {
                     "name": "salt, black pepper"
-                }
-            ],
-            "ingredientGroup": [
-                {
-                    "name": "Mince",
-                    "ingredient": [
-                        {
-                            "amount": "2",
-                            "unit": "lbs",
-                            "name": "beef or lamb",
-                            "preparation": "minced"
-                        },
-                        {
-                            "amount": "2",
-                            "name": "yellow onions",
-                            "preparation": "chopped"
-                        },
-                        {
-                            "amount": "6",
-                            "name": "garlic cloves",
-                            "preparation": "chopped"
-                        },
-                        {
-                            "amount": "500",
-                            "unit": "g",
-                            "name": "passata (Italian-style sieved tomato purée)"
-                        },
-                        {
-                            "name": "cinammon",
-                            "preparation": "ground"
-                        },
-                        {
-                            "name": "cloves",
-                            "preparation": "ground"
-                        },
-                        {
-                            "name": "allspice"
-                        },
-                        {
-                            "amount": "4",
-                            "unit": "tsp",
-                            "name": "Better than Bouillon or other beef bouillon base"
-                        },
-                        {
-                            "amount": "0.5",
-                            "unit": "cup",
-                            "name": "Metaxa or other cognac"
-                        },
-                        {
-                            "amount": "2",
-                            "unit": "tbsp",
-                            "name": "Sukrin Gold or brown sugar"
-                        },
-                        {
-                            "amount": "4",
-                            "name": "bay leaves"
-                        },
-                        {
-                            "name": "butter"
-                        },
-                        {
-                            "name": "black pepper"
-                        },
-                        {
-                            "name": "Worcestershire sauce"
-                        }
-                    ]
                 },
                 {
-                    "name": "Béchamel(ish)",
-                    "ingredient": [
-                        {
-                            "amount": "1",
-                            "unit": "cup",
-                            "name": "butter"
-                        },
-                        {
-                            "amount": "0.5",
-                            "unit": "cup",
-                            "name": "coconut flour"
-                        },
-                        {
-                            "name": "heavy cream"
-                        },
-                        {
-                            "amount": "4",
-                            "name": "egg yolks",
-                            "preparation": "beaten"
-                        },
-                        {
-                            "amount": "250",
-                            "unit": "g",
-                            "name": "hard cheese (we used Gruyère)",
-                            "preparation": "grated"
-                        },
-                        {
-                            "name": "nutmeg",
-                            "preparation": "freshly ground"
-                        }
-                    ]
+                    "amount": "2",
+                    "unit": "lbs",
+                    "name": "beef or lamb",
+                    "preparation": "minced"
+                },
+                {
+                    "amount": "2",
+                    "name": "yellow onions",
+                    "preparation": "chopped"
+                },
+                {
+                    "amount": "6",
+                    "name": "garlic cloves",
+                    "preparation": "chopped"
+                },
+                {
+                    "amount": "500",
+                    "unit": "g",
+                    "name": "passata (Italian-style sieved tomato purée)"
+                },
+                {
+                    "name": "cinammon",
+                    "preparation": "ground"
+                },
+                {
+                    "name": "cloves",
+                    "preparation": "ground"
+                },
+                {
+                    "name": "allspice"
+                },
+                {
+                    "amount": "4",
+                    "unit": "tsp",
+                    "name": "Better than Bouillon or other beef bouillon base"
+                },
+                {
+                    "amount": "0.5",
+                    "unit": "cup",
+                    "name": "Metaxa or other cognac"
+                },
+                {
+                    "amount": "2",
+                    "unit": "tbsp",
+                    "name": "Sukrin Gold or brown sugar"
+                },
+                {
+                    "amount": "4",
+                    "name": "bay leaves"
+                },
+                {
+                    "name": "butter"
+                },
+                {
+                    "name": "black pepper"
+                },
+                {
+                    "name": "Worcestershire sauce"
+                },
+                {
+                    "amount": "1",
+                    "unit": "cup",
+                    "name": "butter"
+                },
+                {
+                    "amount": "0.5",
+                    "unit": "cup",
+                    "name": "coconut flour"
+                },
+                {
+                    "name": "heavy cream"
+                },
+                {
+                    "amount": "4",
+                    "name": "egg yolks",
+                    "preparation": "beaten"
+                },
+                {
+                    "amount": "250",
+                    "unit": "g",
+                    "name": "hard cheese (we used Gruyère)",
+                    "preparation": "grated"
+                },
+                {
+                    "name": "nutmeg",
+                    "preparation": "freshly ground"
                 }
             ],
+            "ingredientGroup": [],
             "step": [
                 {
                     "description": "Cut the eggplants in half and scoop out the center. Leave about 1-1.5cm of flesh. Carve the flesh crosswise."
@@ -1067,7 +1012,117 @@
             "id": "fathead-pineapple-pizza",
             "description": "Low carb and delicious!",
             "tag": [],
-            "ingredient": [],
+            "ingredient": [
+                {
+                    "amount": "130",
+                    "unit": "g",
+                    "name": "almond flour"
+                },
+                {
+                    "amount": "40",
+                    "unit": "g",
+                    "name": "nutritional yeast"
+                },
+                {
+                    "amount": "330",
+                    "unit": "g",
+                    "name": "mozarella",
+                    "preparation": "grated"
+                },
+                {
+                    "amount": "3",
+                    "name": "eggs",
+                    "preparation": "beaten"
+                },
+                {
+                    "amount": "4",
+                    "unit": "tbsp",
+                    "name": "mascarpone"
+                },
+                {
+                    "amount": "0.5",
+                    "unit": "tsp",
+                    "name": "cumin",
+                    "preparation": "freshly ground"
+                },
+                {
+                    "amount": "0.5",
+                    "unit": "tsp",
+                    "name": "garlic powder"
+                },
+                {
+                    "amount": "200",
+                    "unit": "g",
+                    "name": "tomato concentrate/paste"
+                },
+                {
+                    "amount": "5",
+                    "unit": "cloves",
+                    "name": "garlic"
+                },
+                {
+                    "amount": "1",
+                    "unit": "tsp",
+                    "name": "dried basil (or 1 tbsp fresh)"
+                },
+                {
+                    "amount": "1",
+                    "unit": "splash",
+                    "name": "dry red wine"
+                },
+                {
+                    "amount": "1",
+                    "unit": "splash",
+                    "name": "soy sauce "
+                },
+                {
+                    "amount": "1",
+                    "unit": "splash",
+                    "name": "Worcestershire sauce "
+                },
+                {
+                    "amount": "1",
+                    "unit": "tsp",
+                    "name": "Sukrin Gold "
+                },
+                {
+                    "name": "oregano"
+                },
+                {
+                    "amount": "170",
+                    "unit": "g",
+                    "name": "mozarella",
+                    "preparation": "grated"
+                },
+                {
+                    "amount": "250",
+                    "unit": "g",
+                    "name": "cheddar, gouda, gruyere or similar grated"
+                },
+                {
+                    "amount": "5",
+                    "unit": "oz",
+                    "name": "bacon",
+                    "preparation": "sliced and chopped in 1cm pieces"
+                },
+                {
+                    "amount": "1",
+                    "name": "green bell pepper "
+                },
+                {
+                    "amount": "6",
+                    "unit": "oz",
+                    "name": "mushrooms",
+                    "preparation": "sliced"
+                },
+                {
+                    "amount": "200",
+                    "unit": "g",
+                    "name": "pineapple",
+                    "preparation": "in small pieces"
+                }
+            ],
+            "ingredientGroup": [],
             "step": [
                 {
                     "description": "Mix two thirds of the grated mozzarella, the almond flour, and the nutritional yeast in a microwaveable bowl. Add the mascarpone. Microwave on HIGH for 1 minute."
@@ -1106,132 +1161,7 @@
                     "description": "Broil at 260C/500F for about 5 minutes, checking frequently because ovens vary. Enjoy!"
                 }
             ],
-            "forked": "[Fat Head Pizza - The HOLY GRAIL Of Low Carb Pizzas ](https://www.ditchthecarbs.com/fat-head-pizza/)",
-            "ingredientGroup": [
-                {
-                    "name": "Dough",
-                    "ingredient": [
-                        {
-                            "amount": "130",
-                            "unit": "g",
-                            "name": "almond flour"
-                        },
-                        {
-                            "amount": "40",
-                            "unit": "g",
-                            "name": "nutritional yeast"
-                        },
-                        {
-                            "amount": "330",
-                            "unit": "g",
-                            "name": "mozarella",
-                            "preparation": "grated"
-                        },
-                        {
-                            "amount": "3",
-                            "name": "eggs",
-                            "preparation": "beaten"
-                        },
-                        {
-                            "amount": "4",
-                            "unit": "tbsp",
-                            "name": "mascarpone"
-                        },
-                        {
-                            "amount": "0.5",
-                            "unit": "tsp",
-                            "name": "cumin",
-                            "preparation": "freshly ground"
-                        },
-                        {
-                            "amount": "0.5",
-                            "unit": "tsp",
-                            "name": "garlic powder"
-                        }
-                    ]
-                },
-                {
-                    "name": "Tomato sauce",
-                    "ingredient": [
-                        {
-                            "amount": "200",
-                            "unit": "g",
-                            "name": "tomato concentrate/paste"
-                        },
-                        {
-                            "amount": "5",
-                            "unit": "cloves",
-                            "name": "garlic"
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "tsp",
-                            "name": "dried basil (or 1 tbsp fresh)"
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "splash",
-                            "name": "dry red wine"
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "splash",
-                            "name": "soy sauce "
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "splash",
-                            "name": "Worcestershire sauce "
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "tsp",
-                            "name": "Sukrin Gold "
-                        },
-                        {
-                            "name": "oregano"
-                        }
-                    ]
-                },
-                {
-                    "name": "Toppings",
-                    "ingredient": [
-                        {
-                            "amount": "170",
-                            "unit": "g",
-                            "name": "mozarella",
-                            "preparation": "grated"
-                        },
-                        {
-                            "amount": "250",
-                            "unit": "g",
-                            "name": "cheddar, gouda, gruyere or similar grated"
-                        },
-                        {
-                            "amount": "5",
-                            "unit": "oz",
-                            "name": "bacon",
-                            "preparation": "sliced and chopped in 1cm pieces"
-                        },
-                        {
-                            "amount": "1",
-                            "name": "green bell pepper "
-                        },
-                        {
-                            "amount": "6",
-                            "unit": "oz",
-                            "name": "mushrooms",
-                            "preparation": "sliced"
-                        },
-                        {
-                            "amount": "200",
-                            "unit": "g",
-                            "name": "pineapple",
-                            "preparation": "in small pieces"
-                        }
-                    ]
-                }
-            ]
+            "forked": "[Fat Head Pizza - The HOLY GRAIL Of Low Carb Pizzas ](https://www.ditchthecarbs.com/fat-head-pizza/)"
         },
         {
             "image": "http://forkgasm.com/images/mushrooms.jpg",
@@ -1732,7 +1662,6 @@
             "name": "No-Bake Strawberry Cheesecake",
             "description": "A delicious low carb treat!",
             "tag": ["Dessert"],
-            "ingredient": [],
             "step": [
                 {
                     "description": "**Base:** \n1. In a medium frying pan, melt the ghee under low heat. \n2. Add the almond and coconut flour and stir continuously. \n3. It will look very runny at first, that's normal. When it starts darkening and becoming more viscous, add the cinnamon and sweetener. \n4. When it's light brown and most of the the ghee has been absorbed, it's about done. At that point, add the vanilla extract. It will foam, that's ok. Stir until it goes down again.\n5. Press into a 9\" springform cake tray. Let it cool down in the fridge."
@@ -1749,92 +1678,78 @@
             ],
             "notes": "- We use Sukrin Gold and Sukrin Icing for sweetening. We've tried many and think those are as close as it gets to the sugar equivalents and have no aftertaste.\n- You can use less mascarpone, the middle layer will just be less thick. Adjust the rest of the quantities accordingly in that case.",
             "id": "cheesecake",
-            "ingredientGroup": [
+            "ingredient": [
                 {
-                    "name": "Base",
-                    "ingredient": [
-                        {
-                            "amount": "1.5",
-                            "unit": "cup",
-                            "name": "almond flour"
-                        },
-                        {
-                            "amount": "200",
-                            "unit": "g",
-                            "name": "butter or ghee"
-                        },
-                        {
-                            "name": "brown sugar substitute",
-                            "amount": "3",
-                            "unit": "tbsp"
-                        },
-                        {
-                            "name": "vanilla extract",
-                            "amount": "4",
-                            "unit": "tbsp"
-                        },
-                        {
-                            "name": "cinammon",
-                            "amount": "1",
-                            "unit": "tsp"
-                        },
-                        {
-                            "amount": "A pinch",
-                            "name": "salt"
-                        }
-                    ]
+                    "amount": "1.5",
+                    "unit": "cup",
+                    "name": "almond flour"
                 },
                 {
-                    "name": "Cream",
-                    "ingredient": [
-                        {
-                            "amount": "40",
-                            "unit": "oz",
-                            "name": "Mascarpone"
-                        },
-                        {
-                            "name": "icing sugar substitute",
-                            "amount": "4",
-                            "unit": "tbsp"
-                        },
-                        {
-                            "amount": "1",
-                            "name": "lemon",
-                            "preparation": "juiced"
-                        },
-                        {
-                            "amount": "2",
-                            "unit": "tbsp",
-                            "name": "vanilla extract"
-                        }
-                    ]
+                    "amount": "200",
+                    "unit": "g",
+                    "name": "butter or ghee"
                 },
                 {
-                    "name": "Topping",
-                    "ingredient": [
-                        {
-                            "amount": "1",
-                            "unit": "lbs",
-                            "name": "strawberries or other berries"
-                        },
-                        {
-                            "name": "gelatin",
-                            "amount": "0.5",
-                            "unit": "scoop"
-                        },
-                        {
-                            "amount": "1",
-                            "name": "lemon",
-                            "preparation": "juiced"
-                        },
-                        {
-                            "name": "Sukrin Gold or similar",
-                            "amount": "2",
-                            "unit": "tbsp"
-                        }
-                    ]
+                    "name": "brown sugar substitute",
+                    "amount": "3",
+                    "unit": "tbsp"
+                },
+                {
+                    "name": "vanilla extract",
+                    "amount": "4",
+                    "unit": "tbsp"
+                },
+                {
+                    "name": "cinammon",
+                    "amount": "1",
+                    "unit": "tsp"
+                },
+                {
+                    "amount": "A pinch",
+                    "name": "salt"
+                },
+                {
+                    "amount": "40",
+                    "unit": "oz",
+                    "name": "Mascarpone"
+                },
+                {
+                    "name": "icing sugar substitute",
+                    "amount": "4",
+                    "unit": "tbsp"
+                },
+                {
+                    "amount": "1",
+                    "name": "lemon",
+                    "preparation": "juiced"
+                },
+                {
+                    "amount": "2",
+                    "unit": "tbsp",
+                    "name": "vanilla extract"
+                },
+                {
+                    "amount": "1",
+                    "unit": "lbs",
+                    "name": "strawberries or other berries"
+                },
+                {
+                    "name": "gelatin",
+                    "amount": "0.5",
+                    "unit": "scoop"
+                },
+                {
+                    "amount": "1",
+                    "name": "lemon",
+                    "preparation": "juiced"
+                },
+                {
+                    "name": "Sukrin Gold or similar",
+                    "amount": "2",
+                    "unit": "tbsp"
                 }
-            ]
+            ],
+            "ingredientGroup": []
         },
         {
             "image": "http://forkgasm.com/images/curried-beef-stew.jpg",
@@ -1894,6 +1809,51 @@
                     "amount": "1",
                     "unit": "tbsp",
                     "name": "ground chipotle"
+                },
+                {
+                    "amount": "2",
+                    "name": "dried guajillo chillies",
+                    "preparation": "stemmed and seeded"
+                },
+                {
+                    "amount": "0.5",
+                    "unit": "tsp",
+                    "name": "kosher salt"
+                },
+                {
+                    "amount": "1",
+                    "name": "lemongrass stalk",
+                    "preparation": "bottom 4\" only, tough outer layer removed, cut into 1\" pieces"
+                },
+                {
+                    "amount": "1",
+                    "name": "garlic head"
+                },
+                {
+                    "amount": "1",
+                    "unit": "tbsp",
+                    "name": "peeled fresh ginger"
+                },
+                {
+                    "amount": "2",
+                    "unit": "tsp",
+                    "name": "galangal powder"
+                },
+                {
+                    "amount": "2",
+                    "unit": "tbsp",
+                    "name": "peeled fresh turmeric"
+                },
+                {
+                    "amount": "0.5",
+                    "unit": "cup",
+                    "name": "shallots",
+                    "preparation": "chopped"
+                },
+                {
+                    "amount": "1",
+                    "unit": "tbsp",
+                    "name": "Thai shrimp paste"
                 }
             ],
             "step": [
@@ -1915,58 +1875,7 @@
             ],
             "forked": "[Curried Beef Stew](https://www.epicurious.com/recipes/food/views/curried-beef-stew-380591)",
             "id": "curried-beef-stew",
-            "ingredientGroup": [
-                {
-                    "name": "Curry paste",
-                    "ingredient": [
-                        {
-                            "amount": "2",
-                            "name": "dried guajillo chillies",
-                            "preparation": "stemmed and seeded"
-                        },
-                        {
-                            "amount": "0.5",
-                            "unit": "tsp",
-                            "name": "kosher salt"
-                        },
-                        {
-                            "amount": "1",
-                            "name": "lemongrass stalk",
-                            "preparation": "bottom 4\" only, tough outer layer removed, cut into 1\" pieces"
-                        },
-                        {
-                            "amount": "1",
-                            "name": "garlic head"
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "tbsp",
-                            "name": "peeled fresh ginger"
-                        },
-                        {
-                            "amount": "2",
-                            "unit": "tsp",
-                            "name": "galangal powder"
-                        },
-                        {
-                            "amount": "2",
-                            "unit": "tbsp",
-                            "name": "peeled fresh turmeric"
-                        },
-                        {
-                            "amount": "0.5",
-                            "unit": "cup",
-                            "name": "shallots",
-                            "preparation": "chopped"
-                        },
-                        {
-                            "amount": "1",
-                            "unit": "tbsp",
-                            "name": "Thai shrimp paste"
-                        }
-                    ]
-                }
-            ]
+            "ingredientGroup": []
         },
         {
             "name": "Ghormeh Sabzi",
@@ -2025,15 +1934,7 @@
                     "preparation": "rinsed"
                 }
             ],
-            "ingredientGroup": [
-                {
-                    "ingredient": [
-                        {
-                            "amount": "1"
-                        }
-                    ]
-                }
-            ],
+            "ingredientGroup": [],
             "step": [
                 {
                     "description": "Heat olive oil in a large pot. Add chopped onions. If using green onions, also add the whites from them. Sauté until golden."
