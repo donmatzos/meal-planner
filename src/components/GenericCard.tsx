@@ -17,9 +17,10 @@ export const GenericCard = ({description, index,  children}: CardProps) => {
     const layout = () => {
         if (index == -1) {
             return(
-            <div className="flex w-80 max-h-104 drop-shadow-lg rounded-t-md text-white">
-                <div className="flex-col justify-between overflow-hidden rounded-md w-full bg-zinc-900 m-2">
-                    <img className="rounded-t-md object-cover w-full h-60" alt={"Please choose recipe.."} src={""}/>
+            <div className="flex w-80 h-96 drop-shadow-lg rounded-t-md text-white">
+                <div className="flex-col h-[26rem] justify-between overflow-hidden rounded-md w-full bg-zinc-900 m-2">
+                    <img className="rounded-t-md object-cover w-full h-60" alt={"Please choose recipe.."} src={"insert_recipe.png"}/>
+                    <p>Please choose recipe...</p>
                     <h2 className="font-oswald text-2xl font-medium truncate">{children}</h2>
                     <p className="p-2 text-center text-ellipsis line-clamp-2 h-16 ..." >{description}</p>
                     <div>
