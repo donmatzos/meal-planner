@@ -4,7 +4,6 @@ import { FeedHeader } from "./components/FeedHeader";
 import { RecipesOverview } from "./components/RecipesOverview";
 import { Collapsible } from "./components/Collapsible";
 import {RecipeModal} from "./components/RecipeModal";
-import data from "./db/recipes.json";
 import {toggleOpen} from "./recipeSlice";
 
 function App() {

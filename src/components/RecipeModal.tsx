@@ -19,8 +19,8 @@ export const RecipeModal = ({title, description, isOpen, ingredients, steps, onC
     const dispatch = useAppDispatch();
     if (recipe.open) {
         return (
-            <div className={`flex fixed z-10 w-full min-h-screen top-0 left-0`}>
-                <div className="flex flex-col bg-white cursor-pointer justify-center shadow-md min-h-screen">
+            <div className={`flex fixed z-20 w-full min-h-screen top-0 left-0`}>
+                <div className="flex flex-col w-full bg-white cursor-pointer justify-center shadow-md min-h-screen">
 
                     <div className="text-right">
                         <button onClick={() => dispatch(toggleOpen(recipe))} className="">
