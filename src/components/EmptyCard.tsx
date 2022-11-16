@@ -7,11 +7,10 @@ import { Action } from "@reduxjs/toolkit";
 import { enableEditMode } from "../categorySlice";
 
 type CardProps = {
-    description: string;
     children: ReactNode;
 };
 
-export const EmptyCard = ({ description, children }: CardProps) => {
+export const EmptyCard = ({ children }: CardProps) => {
     const dispatch = useAppDispatch();
 
     return (
@@ -26,9 +25,6 @@ export const EmptyCard = ({ description, children }: CardProps) => {
                 <h2 className="font-oswald text-2xl font-medium truncate">
                     {children}
                 </h2>
-                <p className="p-2 text-center text-ellipsis line-clamp-2 h-16 ...">
-                    {description}
-                </p>
                 <div>
                     <button
                         className="bg-violet-600 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0"

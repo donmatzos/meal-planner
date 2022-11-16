@@ -11,6 +11,7 @@ export const categorySlice = createSlice({
     reducers:{
         changeCategory: (state, action?) => {
             state.showRecipes = action.payload;
+            state.editPlanner = false;
         },
         enableEditMode: (state, action?) => {
             state.showRecipes = action.payload;
