@@ -1,4 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit"
+import { addDayEntry } from "./JsonParser"
 
 const initialState = {
     open: false,
