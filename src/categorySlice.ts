@@ -2,6 +2,7 @@ import { createSlice }from "@reduxjs/toolkit"
 
 const initialState = {
     showRecipes: true,
+    editPlanner: false,
 };
 
 export const categorySlice = createSlice({
@@ -11,9 +12,13 @@ export const categorySlice = createSlice({
         changeCategory: (state, action?) => {
             state.showRecipes = action.payload;
         },
+        enableEditMode: (state, action?) => {
+            state.showRecipes = action.payload;
+            state.editPlanner = action.payload;
+        }
     },
 });
 
-export const { changeCategory } = categorySlice.actions;
+export const { changeCategory, enableEditMode } = categorySlice.actions;
 
  export default categorySlice.reducer;
