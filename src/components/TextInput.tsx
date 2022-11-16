@@ -1,12 +1,11 @@
-import {Dispatch, SetStateAction} from "react";
+import React, {Dispatch, SetStateAction} from "react";
 
 type InputProps = {
     label: string
     text: string
-    onChange: () => Dispatch<SetStateAction<string>>
-}
+} & React.InputHTMLAttributes<HTMLInputElement>
 
-export const TextInput = ({ label, text, onChange }: InputProps) => {
+export const TextInput = ({ label, text, ...props}: InputProps) => {
     return(
         <div className="relative">
             <input type="text"
@@ -14,7 +13,7 @@ export const TextInput = ({ label, text, onChange }: InputProps) => {
                    dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white
                    dark:border-gray-600 focus:outline-none focus:ring-0
                    focus:border-violet-400 peer"
-                   onChange={onChange}
+                   {...props}
                    placeholder=" "/>
             <label
                    className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300
