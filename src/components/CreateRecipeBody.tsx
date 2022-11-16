@@ -4,8 +4,6 @@ import {RootState, useAppDispatch} from "../store";
 import {useSelector} from "react-redux";
 import {addIngredient, addStep, changeName, removeLastIngredient, removeLastStep} from "../createRecipeSlice";
 
-
-
 export const CreateRecipeBody = () => {
     const [name, onNameChanged] = useState("")
     const [url, onUrlChanged] = useState("")
