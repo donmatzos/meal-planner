@@ -11,7 +11,7 @@ export const RecipesOverview = () => {
         return data.recipe.filter((r) => r.name.toLowerCase().includes(curSearchTerm.searchTerm.toLowerCase()))
     }
     return (
-        <div className="justify-center">
+        <div className="justify-center bg-slate-900 h-screen">
             <div className="grid grid-cols-6 grid-rows-3">
                 {filteredData().map((dat) =>
                     <RecipeCard id={dat.id} key={dat.id} isSelectable={categorySlice.editPlanner}
