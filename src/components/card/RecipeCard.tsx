@@ -1,25 +1,24 @@
-import React, { ReactNode } from "react";
-import { RecipeModal } from "./RecipeModal";
-import data from "../db/recipes.json";
-import { toggleOpen } from "../recipeSlice";
-import { useAppDispatch } from "../store";
-import { Action } from "@reduxjs/toolkit";
-import { addDayToDb } from "../categorySlice";
+import React, { ReactNode } from "react"
+import data from "../../db/recipes.json"
+import { toggleOpen } from "../../redux/recipeSlice"
+import { useAppDispatch } from "../../redux/store"
+import { Action } from "@reduxjs/toolkit"
+import { addDayToDb } from "../../redux/categorySlice"
 
 type CardProps = {
-    description: string;
-    id: string;
-    isSelectable: boolean;
-    buttonClick?: Action;
-    children: ReactNode;
-};
+    description: string
+    id: string
+    isSelectable: boolean
+    buttonClick?: Action
+    children: ReactNode
+}
 
 const getRecipe = (id: string) => {
     if (id == "") {
-        return null;
+        return null
     }
-    return data.recipe.find((r) => r.id === id);
-};
+    return data.recipe.find((r) => r.id === id)
+}
 
 export const RecipeCard = ({
     description,
@@ -27,8 +26,8 @@ export const RecipeCard = ({
     isSelectable,
     children,
 }: CardProps) => {
-    const dispatch = useAppDispatch();
-    const recipe = getRecipe(id);
+    const dispatch = useAppDispatch()
+    const recipe = getRecipe(id)
 
     const getButton = () => {
         if (isSelectable) {
@@ -39,7 +38,7 @@ export const RecipeCard = ({
                 >
                     Choose Recipe
                 </button>
-            );
+            )
         }
 
         return (
@@ -49,8 +48,8 @@ export const RecipeCard = ({
             >
                 Open Recipe
             </button>
-        );
-    };
+        )
+    }
 
     const layout = () => {
         if (recipe) {
@@ -76,10 +75,10 @@ export const RecipeCard = ({
                         <div>{getButton()}</div>
                     </div>
                 </div>
-            );
+            )
         }
-        return <></>;
-    };
+        return <></>
+    }
 
-    return layout();
-};
+    return layout()
+}

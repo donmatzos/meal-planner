@@ -1,26 +1,23 @@
-import React, { useState } from "react";
-import { GenericButtonModal } from "./GenericButtonModal";
-import { RecipeCreationBody } from "./RecipeCreationBody";
-import { RecipesOverview } from "./RecipesOverview";
-import { WeeklyPlanner } from "./WeeklyPlanner";
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
+import React from "react"
+import { ButtonModal } from "./modal/ButtonModal"
+import { RecipeCreationBody } from "./body/RecipeCreationBody"
+import { RecipesOverview } from "./body/RecipesOverview"
+import { WeeklyPlanner } from "./body/WeeklyPlanner"
+import { useSelector } from "react-redux"
+import { RootState } from "../redux/store"
 
 type MainContainerProps = {
-    children?: React.ReactNode;
-    title: string;
-    modalTitle?: string;
-};
+    children?: React.ReactNode
+    title: string
+    modalTitle?: string
+}
 
-export const MainContainer = ({
-    children,
-    modalTitle,
-}: MainContainerProps) => {
-    const recipe = useSelector((state:RootState) => state.changeCategory);
+export const MainContainer = ({ children, modalTitle }: MainContainerProps) => {
+    const recipe = useSelector((state: RootState) => state.changeCategory)
 
     const getCurrentView = () => {
         if (recipe.showRecipes) {
-            return <RecipesOverview></RecipesOverview>;
+            return <RecipesOverview></RecipesOverview>
         } else {
             return <WeeklyPlanner></WeeklyPlanner>
         }
@@ -32,7 +29,7 @@ export const MainContainer = ({
                 <div>
                     {getCurrentView()}
                     {recipe.showRecipes && (
-                        <GenericButtonModal
+                        <ButtonModal
                             title={modalTitle || "-"}
                             isAddIcon={recipe.showRecipes}
                             children={<RecipeCreationBody />}
@@ -41,5 +38,5 @@ export const MainContainer = ({
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
