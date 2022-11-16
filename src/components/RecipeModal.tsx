@@ -31,9 +31,9 @@ export const RecipeModal = ({id, onClose, children}: RecipeModalProps) => {
 
                         <RecipeContents
                             ingredients={recipe()!.ingredient ? recipe()!.ingredient.map((ingredient) =>
-                                  <li>{ingredient.amount} {ingredient.unit} {ingredient.name}</li>) : [""]}
+                                  <li>{ingredient.amount} {ingredient.unit} {ingredient.name}</li>) : ""}
                             steps={recipe()!.step ? recipe()!.step.map((step) =>
-                                <li>{step.description}</li>) : [""]}
+                                <li>{step.description}</li>) : ""}
                             />
                     </div>
                     <button className="fixed bg-zinc-900 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4"

@@ -3,8 +3,9 @@ import {TextInput} from "./TextInput";
 import {RootState, useAppDispatch} from "../store";
 import {useSelector} from "react-redux";
 import {addIngredient, addStep, changeName, removeLastIngredient, removeLastStep} from "../createRecipeSlice";
+import {RecipeContents} from "./RecipeContents";
 
-export const CreateRecipeBody = () => {
+export const RecipeCreationBody = () => {
     const [name, onNameChanged] = useState("")
     const [url, onUrlChanged] = useState("")
     const [ingredient, onIngredientChanged] = useState("")
@@ -35,7 +36,7 @@ export const CreateRecipeBody = () => {
 
     const popIngredient = () => {
         if (createRecipe.ingredients.length > 0) {
-            dispatch(removeLastIngredient)
+            dispatch(removeLastIngredient())
         }
     }
 
@@ -46,7 +47,7 @@ export const CreateRecipeBody = () => {
 
     const popStep = () => {
         if (createRecipe.steps.length > 0) {
-            dispatch(removeLastStep)
+            dispatch(removeLastStep())
         }
     }
 
@@ -64,7 +65,7 @@ export const CreateRecipeBody = () => {
                 </div>
                 <div className="flex flex-row justify-between p-2">
                     <div className="flex flex-col w-1/3">
-                        <TextInput label="Add Ingredient" text={ingredient} onChange={ingredientInputChanged}/>
+                        <TextInput label="Ingredient and amount" text={ingredient} onChange={ingredientInputChanged}/>
                         <div className="flex flex-row justify-between">
                             <button onClick={pushIngredient}>Add Ingredient</button>
                             <button onClick={popIngredient}>Remove Last</button>
@@ -72,12 +73,22 @@ export const CreateRecipeBody = () => {
                     </div>
                     <div className="flex flex-col w-7/12">
                         <TextInput label="Add Step" text={step} onChange={stepInputChanged}/>
-                        <div className="flex flex-row justify-between">
+                        <div className="flex flex-row justify-end">
                             <button onClick={pushStep}>Add Step</button>
+                            &ensp;
                             <button onClick={popStep}>Remove Last</button>
                         </div>
                     </div>
                 </div>
+                <div className="flex w-full">
+                    <RecipeContents
+                        ingredients={createRecipe.ingredients ? createRecipe.ingredients.map(ingredient =>
+                            <li key={ingredient}>{ingredient}</li>) : "-"}
+                        steps={createRecipe.steps ? createRecipe.steps.map(step =>
+                            <li key={step}>{step}</li>) : "-"}
+                    />
+                </div>
+
             </div>
         </>
     )

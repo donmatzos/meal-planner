@@ -1,8 +1,8 @@
 import React from "react";
 
 type RecipeContentsProps = {
-    ingredients: JSX.Element[] | string[],
-    steps: JSX.Element[] | string[],
+    ingredients: JSX.Element[] | string,
+    steps: JSX.Element[] | string,
 }
 
 export const RecipeContents = ({ ingredients, steps }: RecipeContentsProps) => {

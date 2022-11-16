@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { GenericButtonModal } from "./GenericButtonModal";
-import { CreateRecipeBody } from "./CreateRecipeBody";
+import { RecipeCreationBody } from "./RecipeCreationBody";
 import { RecipesOverview } from "./RecipesOverview";
 import { WeeklyPlanner } from "./WeeklyPlanner";
 import { useSelector } from "react-redux";
@@ -35,7 +35,7 @@ export const MainContainer = ({
                         <GenericButtonModal
                             title={modalTitle || "-"}
                             isAddIcon={recipe.showRecipes}
-                            children={<CreateRecipeBody />}
+                            children={<RecipeCreationBody />}
                         />
                     )}
                 </div>

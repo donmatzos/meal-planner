@@ -9,7 +9,7 @@ const initialState = {
 export const createRecipeSlice = createSlice({
     name: 'createRecipe',
     initialState,
-    reducers:{
+    reducers: {
         changeName: (state, action?) => {
             state.name = action.payload;
             console.log("name changed to " + action.payload);
