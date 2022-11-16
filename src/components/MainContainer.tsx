@@ -14,7 +14,6 @@ type MainContainerProps = {
 
 export const MainContainer = ({
     children,
-    title,
     modalTitle,
 }: MainContainerProps) => {
     const recipe = useSelector((state:RootState) => state.changeCategory);

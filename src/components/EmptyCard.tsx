@@ -1,16 +1,13 @@
-import React, { ReactNode } from "react";
-import { RecipeModal } from "./RecipeModal";
-import data from "../db/recipes.json";
-import { toggleOpen } from "../recipeSlice";
+import { ReactNode } from "react";
 import { useAppDispatch } from "../store";
-import { Action } from "@reduxjs/toolkit";
 import { enableEditMode } from "../categorySlice";
 
 type CardProps = {
+    day: string,
     children: ReactNode;
 };
 
-export const EmptyCard = ({ children }: CardProps) => {
+export const EmptyCard = ({ day, children }: CardProps) => {
     const dispatch = useAppDispatch();
 
     return (
@@ -28,7 +25,7 @@ export const EmptyCard = ({ children }: CardProps) => {
                 <div>
                     <button
                         className="bg-violet-600 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0"
-                        onClick={() => dispatch(enableEditMode(true))}
+                        onClick={() => dispatch(enableEditMode({"enable":true, "day":day}))}
                     >
                         Add Recipe
                     </button>
