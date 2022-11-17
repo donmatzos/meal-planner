@@ -22,14 +22,19 @@ export const WeeklyPlanner = () => {
             return <EmptyCard day={day}></EmptyCard>
         }
         return (
-            <RecipeCard
-                id={recipe.id}
-                key={recipe.id}
-                isSelectable={false}
-                description={recipe.description || "-"}
-            >
-                {recipe.name}
-            </RecipeCard>
+            <div className="min-h-max">
+
+                <button className="float-right relative px-4 py-2 text-white bg-red-600 fixed z-10 p-4 rounded-full">X</button>
+                <RecipeCard
+                    id={recipe.id}
+                    key={recipe.id}
+                    isSelectable={false}
+                    description={recipe.description || "-"}
+                >
+                    {recipe.name}
+                </RecipeCard>
+
+            </div>
         )
     }
 
