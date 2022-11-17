@@ -1,5 +1,8 @@
 import React, { useState } from "react"
 import { FloatingActionButton } from "../button/FloatingActionButton"
+import { useSelector } from 'react-redux'
+import { RootState, useAppDispatch } from '../../redux/store'
+import { changeName, changeUrl, resetIngredients, resetSteps } from '../../redux/createRecipeSlice'
 
 type CreateRecipeModalProps = {
     title: string
@@ -7,12 +10,28 @@ type CreateRecipeModalProps = {
     children?: React.ReactNode
 }
 
-export const ButtonModal = ({
+export const RecipeCreationButtonModal = ({
     title,
     isAddIcon,
     children,
 }: CreateRecipeModalProps) => {
     const [showModal, setShowModal] = useState(false)
+    const createRecipe = useSelector((state: RootState) => state.createRecipe)
+    const dispatch = useAppDispatch()
+
+    const saveRecipe = () => {
+        if (createRecipe.name.length > 1
+            && createRecipe.url.length > 1
+            && createRecipe.ingredients.length > 0
+            && createRecipe.steps.length > 0) {
+            /*TODO json write here*/
+            dispatch(changeName(""))
+            dispatch(changeUrl(""))
+            dispatch(resetIngredients())
+            dispatch(resetSteps())
+        }
+        setShowModal(false)
+    }
 
     return (
         <>
@@ -64,7 +83,7 @@ export const ButtonModal = ({
                                     </button>
                                     <button
                                         className="bg-violet-400 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0"
-                                        onClick={() => setShowModal(false)}
+                                        onClick={() => saveRecipe}
                                     >
                                         Save Recipe
                                     </button>

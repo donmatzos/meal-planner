@@ -6,6 +6,7 @@ import {
     addIngredient,
     addStep,
     changeName,
+    changeUrl,
     removeLastIngredient,
     removeLastStep,
 } from "../../redux/createRecipeSlice"
@@ -21,10 +22,12 @@ export const RecipeCreationBody = () => {
 
     const nameInputChanged = (event: ChangeEvent<HTMLInputElement>) => {
         onNameChanged(event.target.value)
+        dispatch(changeName(event.target.value))
     }
 
     const urlInputChanged = (event: ChangeEvent<HTMLInputElement>) => {
         onUrlChanged(event.target.value)
+        dispatch(changeUrl(event.target.value))
     }
 
     const ingredientInputChanged = (event: ChangeEvent<HTMLInputElement>) => {
