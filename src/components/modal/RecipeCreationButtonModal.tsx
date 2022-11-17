@@ -1,9 +1,14 @@
 import React, { useState } from "react"
 import { FloatingActionButton } from "../button/FloatingActionButton"
-import { useSelector } from 'react-redux'
-import { RootState, useAppDispatch } from '../../redux/store'
-import { changeName, changeUrl, resetIngredients, resetSteps } from '../../redux/createRecipeSlice'
-import { addRecipe, Recipe } from '../../util/JsonParser'
+import { useSelector } from "react-redux"
+import { RootState, useAppDispatch } from "../../redux/store"
+import {
+    changeName,
+    changeUrl,
+    resetIngredients,
+    resetSteps,
+} from "../../redux/createRecipeSlice"
+import { addRecipe, Recipe } from "../../util/JsonParser"
 
 type CreateRecipeModalProps = {
     title: string
@@ -21,11 +26,22 @@ export const RecipeCreationButtonModal = ({
     const dispatch = useAppDispatch()
 
     const saveRecipe = () => {
-        if (createRecipe.name.length > 1
-            && createRecipe.image.length > 1
-            && createRecipe.ingredients.length > 0
-            && createRecipe.steps.length > 0) {
-            addRecipe({id: Date.now().toString(), ...createRecipe} as Recipe)
+        if (
+            createRecipe.name.length > 1 &&
+            createRecipe.image.length > 1 &&
+            createRecipe.ingredient.length > 0 &&
+            createRecipe.step.length > 0
+        ) {
+            console.log({
+                id: Date.now().toString(),
+                ...createRecipe,
+            } as Recipe)
+
+            addRecipe({
+                id: Date.now().toString(),
+                description: "Your personally added Recipe!",
+                ...createRecipe,
+            } as Recipe)
             dispatch(changeName(""))
             dispatch(changeUrl(""))
             dispatch(resetIngredients())

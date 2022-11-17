@@ -14,7 +14,7 @@ export const RecipesOverview = () => {
     useEffect(() => {
         const filteredData = async () => {
             const recipes = await getRecipes()
-            var res: Recipe[] = []
+            let res: Recipe[]
             res = recipes.filter((r: Recipe) =>
                 r.name
                     .toLowerCase()

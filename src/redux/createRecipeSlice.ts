@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
     name: "",
     image: "",
-    ingredients: ["Your list of all ingredients"],
-    steps: ["Your list of all steps"],
+    ingredient: [{ name: "Your list of all ingredients" }],
+    step: [{ description: "Your list of all step" }],
 }
 
 export const createRecipeSlice = createSlice({
@@ -18,28 +18,34 @@ export const createRecipeSlice = createSlice({
             state.image = action.payload
         },
         addIngredient: (state, action?) => {
-            if (state.ingredients[0] === "Your list of all ingredients") {
-                state.ingredients.pop()
+            if (
+                state.ingredient.length &&
+                state.ingredient[0].name === "Your list of all ingredients"
+            ) {
+                state.ingredient.pop()
             }
-            state.ingredients.push(action.payload)
+            state.ingredient.push({ name: action.payload })
         },
         removeLastIngredient: (state) => {
-            state.ingredients.pop()
+            state.ingredient.pop()
         },
         resetIngredients: (state) => {
-            state.ingredients = ["Your list of all ingredients"]
+            state.ingredient = [{ name: "Your list of all ingredients" }]
         },
         addStep: (state, action) => {
-            if (state.steps[0] === "Your list of all steps") {
-                state.steps.pop()
+            if (
+                state.step.length === 1 &&
+                state.step[0].description === "Your list of all step"
+            ) {
+                state.step.pop()
             }
-            state.steps.push(action.payload)
+            state.step.push({ description: action.payload })
         },
         removeLastStep: (state) => {
-            state.steps.pop()
+            state.step.pop()
         },
         resetSteps: (state) => {
-            state.steps = ["Your list of all steps"]
+            state.step = [{ description: "Your list of all step" }]
         },
     },
 })
@@ -52,7 +58,7 @@ export const {
     resetIngredients,
     addStep,
     removeLastStep,
-    resetSteps
+    resetSteps,
 } = createRecipeSlice.actions
 
 export default createRecipeSlice.reducer

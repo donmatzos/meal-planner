@@ -46,7 +46,7 @@ export const RecipeCreationBody = () => {
     }
 
     const popIngredient = () => {
-        if (createRecipe.ingredients.length > 0) {
+        if (createRecipe.ingredient.length > 0) {
             dispatch(removeLastIngredient())
         }
     }
@@ -59,7 +59,7 @@ export const RecipeCreationBody = () => {
     }
 
     const popStep = () => {
-        if (createRecipe.steps.length > 0) {
+        if (createRecipe.step.length > 0) {
             dispatch(removeLastStep())
         }
     }
@@ -115,16 +115,20 @@ export const RecipeCreationBody = () => {
                 <div className="flex w-full">
                     <RecipeContents
                         ingredients={
-                            createRecipe.ingredients
-                                ? createRecipe.ingredients.map((ingredient) => (
-                                      <li key={ingredient}>{ingredient}</li>
+                            createRecipe.ingredient
+                                ? createRecipe.ingredient.map((ingredient) => (
+                                      <li key={ingredient.name}>
+                                          {ingredient.name}
+                                      </li>
                                   ))
                                 : "-"
                         }
                         steps={
-                            createRecipe.steps
-                                ? createRecipe.steps.map((step) => (
-                                      <li key={step}>{step}</li>
+                            createRecipe.step
+                                ? createRecipe.step.map((step) => (
+                                      <li key={step.description}>
+                                          {step.description}
+                                      </li>
                                   ))
                                 : "-"
                         }
