@@ -1,10 +1,10 @@
 import React from "react"
-import { ButtonModal } from "./modal/ButtonModal"
-import { RecipeCreationBody } from "./body/RecipeCreationBody"
-import { RecipesOverview } from "./body/RecipesOverview"
-import { WeeklyPlanner } from "./body/WeeklyPlanner"
+import { ButtonModal } from "../modal/ButtonModal"
+import { RecipeCreationBody } from "./RecipeCreationBody"
+import { RecipesOverview } from "./RecipesOverview"
+import { WeeklyPlanner } from "./WeeklyPlanner"
 import { useSelector } from "react-redux"
-import { RootState } from "../redux/store"
+import { RootState } from "../../redux/store"
 
 type MainContainerProps = {
     children?: React.ReactNode

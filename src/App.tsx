@@ -1,7 +1,7 @@
 import React from "react"
 import "./App.css"
 import { FeedHeader } from "./components/header/FeedHeader"
-import { MainContainer } from "./components/MainContainer"
+import { MainContainer } from "./components/body/MainContainer"
 import { RecipeModal } from "./components/modal/RecipeModal"
 import { toggleOpen } from "./redux/recipeSlice"
 
