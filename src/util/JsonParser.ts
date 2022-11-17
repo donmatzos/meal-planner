@@ -29,8 +29,9 @@ export const addDayEntry = (value: DayEntry) => {
         .then((data) => console.log(data))
 }
 
-export const deleteDayEntry = (id: string) => {
-    fetch("http://localhost:3000/days" + id, {
+export const deleteDayEntry = async (id: string) => {
+    const day:DayEntry = await getSingleDay(id)
+    return fetch("http://localhost:3000/days/" + day.id, {
         method: "DELETE",
     })
         .then((res) => res.json())
@@ -100,7 +101,7 @@ export const addRecipe = (value: Recipe) => {
 }
 
 export const deleteRecipe = (id: string) => {
-    fetch("http://localhost:3000/recipe" + id, {
+    return fetch("http://localhost:3000/recipe" + id, {
         method: "DELETE",
     })
         .then((res) => res.json())
