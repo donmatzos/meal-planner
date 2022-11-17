@@ -81,10 +81,9 @@ export const RecipeCreationButtonModal = ({
                                         text-3xl leading-none font-semibold"
                                         onClick={() => setShowModal(false)}
                                     >
-                                        <img
-                                            src={"../icons/close.svg"}
-                                            alt="close"
-                                        />
+                                        <span className="text-white">
+                                            X
+                                        </span>
                                     </button>
                                 </div>
                                 {/*body*/}

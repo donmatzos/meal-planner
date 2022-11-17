@@ -13,7 +13,6 @@ import { RecipeCard } from "../card/RecipeCard"
 
 export const WeeklyPlanner = () => {
     const [savedRecipes, setSavedRecipes] = useState<Map<string, Recipe>>()
-    const category = useSelector((state: RootState) => state.changeCategory)
 
     useEffect(() => {
         getWeek().then(setSavedRecipes)
