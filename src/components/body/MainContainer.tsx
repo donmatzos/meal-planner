@@ -1,5 +1,5 @@
 import React from "react"
-import { ButtonModal } from "../modal/ButtonModal"
+import { RecipeCreationButtonModal } from "../modal/RecipeCreationButtonModal"
 import { RecipeCreationBody } from "./RecipeCreationBody"
 import { RecipesOverview } from "./RecipesOverview"
 import { WeeklyPlanner } from "./WeeklyPlanner"
@@ -29,7 +29,7 @@ export const MainContainer = ({ children, modalTitle }: MainContainerProps) => {
                 <div>
                     {getCurrentView()}
                     {recipe.showRecipes && (
-                        <ButtonModal
+                        <RecipeCreationButtonModal
                             title={modalTitle || "-"}
                             isAddIcon={recipe.showRecipes}
                             children={<RecipeCreationBody />}

@@ -6,6 +6,7 @@ import {
     addIngredient,
     addStep,
     changeName,
+    changeUrl,
     removeLastIngredient,
     removeLastStep,
 } from "../../redux/createRecipeSlice"
@@ -21,10 +22,12 @@ export const RecipeCreationBody = () => {
 
     const nameInputChanged = (event: ChangeEvent<HTMLInputElement>) => {
         onNameChanged(event.target.value)
+        dispatch(changeName(event.target.value))
     }
 
     const urlInputChanged = (event: ChangeEvent<HTMLInputElement>) => {
         onUrlChanged(event.target.value)
+        dispatch(changeUrl(event.target.value))
     }
 
     const ingredientInputChanged = (event: ChangeEvent<HTMLInputElement>) => {
@@ -36,8 +39,10 @@ export const RecipeCreationBody = () => {
     }
 
     const pushIngredient = () => {
-        dispatch(addIngredient(ingredient))
-        onIngredientChanged("")
+        if (ingredient.length > 1) {
+            dispatch(addIngredient(ingredient))
+            onIngredientChanged("")
+        }
     }
 
     const popIngredient = () => {
@@ -47,8 +52,10 @@ export const RecipeCreationBody = () => {
     }
 
     const pushStep = () => {
-        dispatch(addStep(step))
-        onStepChanged("")
+        if (step.length > 1) {
+            dispatch(addStep(step))
+            onStepChanged("")
+        }
     }
 
     const popStep = () => {
@@ -84,10 +91,11 @@ export const RecipeCreationBody = () => {
                             text={ingredient}
                             onChange={ingredientInputChanged}
                         />
-                        <div className="flex flex-row justify-between">
+                        <div className="flex flex-row justify-end">
                             <button onClick={pushIngredient}>
                                 Add Ingredient
                             </button>
+                            &ensp;
                             <button onClick={popIngredient}>Remove Last</button>
                         </div>
                     </div>
