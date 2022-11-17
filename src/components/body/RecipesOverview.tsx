@@ -1,25 +1,38 @@
-import React from "react"
-import data from "../../db/recipes.json"
+import React, { useEffect, useState } from "react"
 import { RecipeCard } from "../card/RecipeCard"
 import { useSelector } from "react-redux"
 import { RootState } from "../../redux/store"
+import { getRecipes, Recipe } from "../../util/JsonParser"
 
 export const RecipesOverview = () => {
     const curSearchTerm = useSelector((state: RootState) => state.openRecipe)
     const categorySlice = useSelector(
         (state: RootState) => state.changeCategory
     )
-    const filteredData = () => {
-        return data.recipe.filter((r) =>
-            r.name
-                .toLowerCase()
-                .includes(curSearchTerm.searchTerm.toLowerCase())
-        )
-    }
+    const [recipes, setRecipes] = useState<Recipe[]>([])
+
+    useEffect(() => {
+        const filteredData = async () => {
+            const recipes = await getRecipes()
+            var res: Recipe[] = []
+            res = recipes.filter((r: Recipe) =>
+                r.name
+                    .toLowerCase()
+                    .includes(curSearchTerm.searchTerm.toLowerCase())
+            )
+            if (!res) {
+                console.log("res is undefined")
+                return
+            }
+            setRecipes(res)
+        }
+        filteredData()
+    }, [])
+
     return (
         <div className="justify-center bg-slate-900 h-screen">
             <div className="grid grid-cols-6 grid-rows-3">
-                {filteredData().map((dat) => (
+                {recipes.map((dat: Recipe) => (
                     <RecipeCard
                         id={dat.id}
                         key={dat.id}

@@ -1,25 +1,23 @@
-import { recipeSlice } from "../redux/recipeSlice"
-import recipeData from "../db/recipes.json"
-import dayEntryData from "../db/dayEntries.json"
-
 type DayEntry = {
     day: string
     recipeId: string
 }
 
+var recipesCache: Recipe[] = []
+
 export const addDayEntry = (value: DayEntry) => {
-    dayEntryData.days.push(value)
+    //dayEntryData.days.push(value)
 }
 
 export const deleteDayEntry = (id: string) => {
-    dayEntryData.days = dayEntryData.days.filter((_) => _.recipeId !== id)
+    //dayEntryData.days = dayEntryData.days.filter((_) => _.recipeId !== id)
 }
 
 export const getDays = () => {
-    return dayEntryData.days
+    //return dayEntryData.days
 }
 
-type Recipe = {
+export type Recipe = {
     name: string
     id: string
     description: string
@@ -40,13 +38,33 @@ type Recipe = {
 }
 
 export const addRecipe = (value: Recipe) => {
-    recipeData.recipe.push(value)
+    //recipeData.recipe.push(value)
 }
 
 export const deleteRecipe = (id: string) => {
-    recipeData.recipe = recipeData.recipe.filter((_) => _.id !== id)
+    //recipeData.recipe = recipeData.recipe.filter((_) => _.id !== id)
 }
 
-export const getRecipes = () => {
-    return recipeData.recipe
+export const getSingleRecipe = async (id: string) => {
+    const recipes = await getRecipes()
+    return recipes.find((r: Recipe) => r.id === id)
+}
+
+export const getRecipes = (refresh: boolean = false) => {
+    if (!refresh && recipesCache.length !== 0) {
+        return recipesCache
+    }
+
+    return fetch("http://localhost:3000/recipe")
+        .then((res) => res.json())
+        .then(
+            (result) => {
+                recipesCache = result
+                return result
+            },
+            (error) => {
+                console.log(error)
+                return error
+            }
+        )
 }

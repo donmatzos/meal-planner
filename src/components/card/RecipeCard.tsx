@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react"
-import data from "../../db/recipes.json"
+import React, { ReactNode, useEffect, useState } from "react"
 import { toggleOpen } from "../../redux/recipeSlice"
 import { useAppDispatch } from "../../redux/store"
 import { Action } from "@reduxjs/toolkit"
 import { addDayToDb } from "../../redux/categorySlice"
+import { getSingleRecipe, Recipe } from "../../util/JsonParser"
 
 type CardProps = {
     description: string
@@ -13,13 +13,6 @@ type CardProps = {
     children: ReactNode
 }
 
-const getRecipe = (id: string) => {
-    if (id == "") {
-        return null
-    }
-    return data.recipe.find((r) => r.id === id)
-}
-
 export const RecipeCard = ({
     description,
     id,
@@ -27,7 +20,15 @@ export const RecipeCard = ({
     children,
 }: CardProps) => {
     const dispatch = useAppDispatch()
-    const recipe = getRecipe(id)
+    const [recipe, setRecipe] = useState<Recipe>()
+
+    useEffect(() => {
+        const filteredData = async () => {
+            setRecipe(await getSingleRecipe(id))
+        }
+
+        filteredData()
+    }, [])
 
     const getButton = () => {
         if (isSelectable) {
