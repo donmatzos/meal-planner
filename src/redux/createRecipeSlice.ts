@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
     name: "",
-    url: "",
+    image: "",
     ingredients: ["Your list of all ingredients"],
     steps: ["Your list of all steps"],
 }
@@ -15,7 +15,7 @@ export const createRecipeSlice = createSlice({
             state.name = action.payload
         },
         changeUrl: (state, action?) => {
-            state.url = action.payload
+            state.image = action.payload
         },
         addIngredient: (state, action?) => {
             if (state.ingredients[0] === "Your list of all ingredients") {
@@ -52,7 +52,7 @@ export const {
     resetIngredients,
     addStep,
     removeLastStep,
-    resetSteps,
+    resetSteps
 } = createRecipeSlice.actions
 
 export default createRecipeSlice.reducer
