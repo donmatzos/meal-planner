@@ -84,10 +84,11 @@ export const RecipeCreationBody = () => {
                             text={ingredient}
                             onChange={ingredientInputChanged}
                         />
-                        <div className="flex flex-row justify-between">
+                        <div className="flex flex-row justify-end">
                             <button onClick={pushIngredient}>
                                 Add Ingredient
                             </button>
+                            &ensp;
                             <button onClick={popIngredient}>Remove Last</button>
                         </div>
                     </div>

@@ -2,8 +2,8 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
     name: "",
-    ingredients: [""],
-    steps: [""],
+    ingredients: ["Your list of all ingredients"],
+    steps: ["Your list of all steps"],
 }
 
 export const createRecipeSlice = createSlice({
@@ -12,15 +12,20 @@ export const createRecipeSlice = createSlice({
     reducers: {
         changeName: (state, action?) => {
             state.name = action.payload
-            console.log("name changed to " + action.payload)
         },
         addIngredient: (state, action?) => {
+            if (state.ingredients[0] === "Your list of all ingredients") {
+                state.ingredients.pop()
+            }
             state.ingredients.push(action.payload)
         },
         removeLastIngredient: (state) => {
             state.ingredients.pop()
         },
         addStep: (state, action) => {
+            if (state.steps[0] === "Your list of all  steps") {
+                state.steps.pop()
+            }
             state.steps.push(action.payload)
         },
         removeLastStep: (state) => {
