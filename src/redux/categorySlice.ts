@@ -23,7 +23,11 @@ export const categorySlice = createSlice({
         },
         addDayToDb: (state, action?) => {
             state.showRecipes = false
-            addDayEntry({ id: Date.now().toString() ,day: state.selectedDay, recipeId: action.payload })
+            addDayEntry({
+                id: Date.now().toString(),
+                day: state.selectedDay,
+                recipeId: action.payload,
+            })
             state.selectedDay = ""
         },
     },
