@@ -30,7 +30,7 @@ export const addDayEntry = (value: DayEntry) => {
 }
 
 export const deleteDayEntry = async (id: string) => {
-    const day:DayEntry = await getSingleDay(id)
+    const day: DayEntry = await getSingleDay(id)
     return fetch("http://localhost:3000/days/" + day.id, {
         method: "DELETE",
     })
@@ -98,6 +98,12 @@ export const addRecipe = (value: Recipe) => {
     fetch("http://localhost:3000/recipe", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data))
+}
+
+export const exportRecipe = (recipe: Recipe) => {
+    const fileData = JSON.stringify(recipe.ingredient)
+    const blob = new Blob([fileData], { type: "text/plain" })
+    return URL.createObjectURL(blob)
 }
 
 export const deleteRecipe = (id: string) => {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { RootState } from "../../redux/store"
-import { getWeek, Days, Recipe, deleteDayEntry } from "../../util/JsonParser"
+import { getWeek, Days, Recipe, deleteDayEntry, exportRecipe } from "../../util/JsonParser"
 import { EmptyCard } from "../card/EmptyCard"
 import { RecipeCard } from "../card/RecipeCard"
 
@@ -13,8 +13,8 @@ export const WeeklyPlanner = () => {
         getWeek().then(setSavedRecipes)
     }, [])
 
-    const clearDay = (day:string) => {
-        deleteDayEntry(day).then(() => getWeek().then(setSavedRecipes));
+    const clearDay = (day: string) => {
+        deleteDayEntry(day).then(() => getWeek().then(setSavedRecipes))
     }
 
     const getCard = (day: string) => {
@@ -27,6 +27,12 @@ export const WeeklyPlanner = () => {
         }
         return (
             <div className="min-h-max">
+                <a download="recipe.json"
+                    href ={exportRecipe(recipe)}
+                    className="float-left relative px-4 py-2 text-white bg-violet-600 fixed z-10 p-4 rounded-full"
+                >
+                    📁
+                </a>
                 <button
                     onClick={() => clearDay(day)}
                     className="float-right relative px-4 py-2 text-white bg-red-600 fixed z-10 p-4 rounded-full"
