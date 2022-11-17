@@ -27,11 +27,11 @@ export const RecipesOverview = () => {
             setRecipes(res)
         }
         filteredData()
-    }, [])
+    }, [curSearchTerm])
 
     return (
         <div className="justify-center bg-slate-900 h-screen">
-            <div className="grid grid-cols-6 grid-rows-3">
+            <div className="grid grid-cols-6 bg-slate-900 grid-rows-3">
                 {recipes.map((dat: Recipe) => (
                     <RecipeCard
                         id={dat.id}
