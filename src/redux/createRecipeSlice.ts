@@ -23,7 +23,7 @@ export const createRecipeSlice = createSlice({
             state.ingredients.pop()
         },
         addStep: (state, action) => {
-            if (state.steps[0] === "Your list of all  steps") {
+            if (state.steps[0] === "Your list of all steps") {
                 state.steps.pop()
             }
             state.steps.push(action.payload)
