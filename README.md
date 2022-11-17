@@ -22,3 +22,14 @@ _________________
 
 _________________
 
+### Setup
+
+1. Install all dependencies via "npm install"
+2. Depending on the used shell, the startDb script (package.json) needs other parameters
+   - mac/zsh: PORT=3010 react-scripts start
+   - windows/cmd: set PORT=3010 && react-scripts start
+3. Run "npm run startDb"
+4. Run "npm start"
+5. As mentioned above, the used port is 3010 instead of default 3000
+6. Port 3000 works as data access layer
+7. Run "npm run cypress" to start cypress tests
