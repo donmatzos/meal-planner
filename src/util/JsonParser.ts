@@ -14,8 +14,8 @@ export const Days = [
     "Sunday",
 ]
 
-var recipesCache: Recipe[] = []
-var daysCache: DayEntry[] = []
+//var recipesCache: Recipe[] = []
+//var daysCache: DayEntry[] = []
 
 export const addDayEntry = (value: DayEntry) => {
     const requestOptions: RequestInit = {
@@ -27,10 +27,15 @@ export const addDayEntry = (value: DayEntry) => {
     fetch("http://localhost:3000/days", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data))
+        .then(() => getDays(true))
 }
 
 export const deleteDayEntry = (id: string) => {
-    //dayEntryData.days = dayEntryData.days.filter((_) => _.recipeId !== id)
+    fetch("http://localhost:3000/days" + id, {
+        method: "DELETE",
+    })
+        .then((res) => res.json())
+        .then((res) => console.log(res))
 }
 
 export const getWeek: () => Promise<Map<string, Recipe>> = async () => {
@@ -51,12 +56,11 @@ export const getWeek: () => Promise<Map<string, Recipe>> = async () => {
 }
 
 export const getDays = async (refresh: boolean = false) => {
-    if (!refresh && daysCache.length !== 0) {
+    /*if (!refresh && daysCache.length !== 0) {
         return daysCache
-    }
+    }*/
 
-    daysCache = await jsonRequest("http://localhost:3000/days")
-    return daysCache
+    return await jsonRequest("http://localhost:3000/days")
 }
 
 export const getSingleDay = async (day: string) => {
@@ -90,14 +94,20 @@ export const addRecipe = (value: Recipe) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(value),
     }
-    
+
     fetch("http://localhost:3000/recipe", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data))
+        .then(() => getRecipes(true))
 }
 
 export const deleteRecipe = (id: string) => {
-    //recipeData.recipe = recipeData.recipe.filter((_) => _.id !== id)
+    fetch("http://localhost:3000/recipe" + id, {
+        method: "DELETE",
+    })
+        .then((res) => res.json())
+        .then((res) => console.log(res))
+        .then(() => getRecipes(true))
 }
 
 export const getSingleRecipe = async (id: string) => {
@@ -122,10 +132,9 @@ const jsonRequest = (link: string) => {
 export const getRecipes = async (
     refresh: boolean = false
 ): Promise<Recipe[]> => {
-    if (!refresh && recipesCache.length !== 0) {
+    /*if (!refresh && recipesCache.length !== 0) {
         return recipesCache
-    }
+    }*/
 
-    recipesCache = await jsonRequest("http://localhost:3000/recipe")
-    return recipesCache
+    return await jsonRequest("http://localhost:3000/recipe")
 }

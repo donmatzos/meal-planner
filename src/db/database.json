@@ -2044,6 +2044,16 @@
       "id": "1668720160068",
       "day": "Wednesday",
       "recipeId": "cheesecake"
+    },
+    {
+      "id": "1668720720055",
+      "day": "Thursday",
+      "recipeId": "grand-marnier-coffee-ice-cream"
+    },
+    {
+      "id": "1668721436066",
+      "day": "Friday",
+      "recipeId": "turnip-carbonara"
     }
   ]
 }

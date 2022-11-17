@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
+import { RootState } from "../../redux/store"
 import { getWeek, Days, Recipe } from "../../util/JsonParser"
 import { EmptyCard } from "../card/EmptyCard"
 import { RecipeCard } from "../card/RecipeCard"
 
 export const WeeklyPlanner = () => {
     const [savedRecipes, setSavedRecipes] = useState<Map<string, Recipe>>()
+    const category = useSelector((state: RootState) => state.changeCategory)
 
     useEffect(() => {
         getWeek().then(setSavedRecipes)
