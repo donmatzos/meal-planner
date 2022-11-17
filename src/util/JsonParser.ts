@@ -27,7 +27,6 @@ export const addDayEntry = (value: DayEntry) => {
     fetch("http://localhost:3000/days", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data))
-        .then(() => getDays(true))
 }
 
 export const deleteDayEntry = (id: string) => {
@@ -98,7 +97,6 @@ export const addRecipe = (value: Recipe) => {
     fetch("http://localhost:3000/recipe", requestOptions)
         .then((response) => response.json())
         .then((data) => console.log(data))
-        .then(() => getRecipes(true))
 }
 
 export const deleteRecipe = (id: string) => {
@@ -107,7 +105,6 @@ export const deleteRecipe = (id: string) => {
     })
         .then((res) => res.json())
         .then((res) => console.log(res))
-        .then(() => getRecipes(true))
 }
 
 export const getSingleRecipe = async (id: string) => {
