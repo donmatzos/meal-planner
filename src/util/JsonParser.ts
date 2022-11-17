@@ -6,7 +6,7 @@ type DayEntry = {
 
 export const Days = [
     "Monday",
-    "Thuesday",
+    "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
