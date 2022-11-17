@@ -3,6 +3,7 @@ import { FloatingActionButton } from "../button/FloatingActionButton"
 import { useSelector } from 'react-redux'
 import { RootState, useAppDispatch } from '../../redux/store'
 import { changeName, changeUrl, resetIngredients, resetSteps } from '../../redux/createRecipeSlice'
+import { addRecipe, Recipe } from '../../util/JsonParser'
 
 type CreateRecipeModalProps = {
     title: string
@@ -21,10 +22,10 @@ export const RecipeCreationButtonModal = ({
 
     const saveRecipe = () => {
         if (createRecipe.name.length > 1
-            && createRecipe.url.length > 1
+            && createRecipe.image.length > 1
             && createRecipe.ingredients.length > 0
             && createRecipe.steps.length > 0) {
-            /*TODO json write here*/
+            addRecipe({id: Date.now().toString(), ...createRecipe} as Recipe)
             dispatch(changeName(""))
             dispatch(changeUrl(""))
             dispatch(resetIngredients())
@@ -83,7 +84,7 @@ export const RecipeCreationButtonModal = ({
                                     </button>
                                     <button
                                         className="bg-violet-400 hover:bg-violet-500 font-bold py-2 px-4 rounded-full m-4 bottom-0"
-                                        onClick={() => saveRecipe}
+                                        onClick={() => saveRecipe()}
                                     >
                                         Save Recipe
                                     </button>

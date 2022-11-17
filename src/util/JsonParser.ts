@@ -70,17 +70,17 @@ export const getSingleDay = async (day: string) => {
 export type Recipe = {
     name: string
     id: string
-    description: string
-    tag: string[]
-    image: string
-    ingredient: {
+    description?: string
+    tag?: string[]
+    image?: string
+    ingredient?: {
         name: string
         unit?: string
         amount?: string
         preparation?: undefined
     }[]
-    ingredientGroup: never[]
-    step: {
+    ingredientGroup?: never[]
+    step?: {
         description: string
     }[]
     notes?: undefined
