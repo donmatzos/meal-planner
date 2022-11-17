@@ -20,15 +20,15 @@ export const RecipeModal = ({ id, onClose, children }: RecipeModalProps) => {
     useEffect(() => {
         const filteredData = async () => {
             const recipes = await getRecipes()
-            var res: Recipe[] = []
+            var res: Recipe
             res = recipes.find((r: Recipe) => r.id === curRecipe.id)
             if (!res) {
                 return
             }
-            setRecipe(res[0])
+            setRecipe(res)
         }
         filteredData()
-    }, [])
+    }, [curRecipe])
 
     if (curRecipe.open && curRecipe.id && recipe) {
         return (
