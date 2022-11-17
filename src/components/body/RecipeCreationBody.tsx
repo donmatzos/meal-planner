@@ -36,8 +36,10 @@ export const RecipeCreationBody = () => {
     }
 
     const pushIngredient = () => {
-        dispatch(addIngredient(ingredient))
-        onIngredientChanged("")
+        if (ingredient.length > 1) {
+            dispatch(addIngredient(ingredient))
+            onIngredientChanged("")
+        }
     }
 
     const popIngredient = () => {
@@ -47,8 +49,10 @@ export const RecipeCreationBody = () => {
     }
 
     const pushStep = () => {
-        dispatch(addStep(step))
-        onStepChanged("")
+        if (step.length > 1) {
+            dispatch(addStep(step))
+            onStepChanged("")
+        }
     }
 
     const popStep = () => {
