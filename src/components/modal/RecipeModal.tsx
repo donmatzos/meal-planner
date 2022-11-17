@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { ReactNode } from "react"
 import { useSelector } from "react-redux"
 import { RootState, useAppDispatch } from "../../redux/store"
@@ -20,7 +20,7 @@ export const RecipeModal = ({ id, onClose, children }: RecipeModalProps) => {
     useEffect(() => {
         const filteredData = async () => {
             const recipes = await getRecipes()
-            var res: Recipe
+            var res: Recipe | undefined
             res = recipes.find((r: Recipe) => r.id === curRecipe.id)
             if (!res) {
                 return
@@ -43,7 +43,7 @@ export const RecipeModal = ({ id, onClose, children }: RecipeModalProps) => {
                     />
                     <div className="flex-col text-left my-auto">
                         <div className="">
-                            <h1 className="text-4xl font-bold font-oswald text-2xl p-6">
+                            <h1 className="text-4xl font-bold font-oswald p-6">
                                 {recipe.name}
                             </h1>
                             <h2 className="text-xl pl-8 pb-4">
